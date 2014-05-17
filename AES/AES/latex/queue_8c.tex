@@ -2,14 +2,95 @@
 \label{queue_8c}\index{A\+E\+S/queue.\+c@{A\+E\+S/queue.\+c}}
 }
 {\ttfamily \#include \char`\"{}queue.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
 \subsection*{Функције}
 \begin{DoxyCompactItemize}
+\item 
+void \hyperlink{queue_8c_a4d2d7cd584c8b8e91258e1cb9e74730c}{Initalize\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q)
+\item 
+int \hyperlink{queue_8c_acb6e14705a07b56b590762983af804b6}{Empty\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q)
+\item 
+int \hyperlink{queue_8c_a66f0741d5d5241c7e0bc451c8e569546}{Push\+Back\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q, char $\ast$name\+File)
+\item 
+int \hyperlink{queue_8c_acd760e12e887a92a9ae4895e10177eff}{Push\+Front\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q, char $\ast$name\+File)
+\item 
+char $\ast$ \hyperlink{queue_8c_a747265e67420e9c2f5e17225f52446a1}{First\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q)
+\item 
+char $\ast$ \hyperlink{queue_8c_a28b433e84c3db7c81354134d0c2ba758}{Pop\+Front\+File\+Q} (\hyperlink{queue_8h_a410f32b2d9b233b4fc66864926d200dd}{Queue\+File\+Pt} pt\+Q)
+\item 
+int \hyperlink{queue_8c_a7a1f556afd05cb9f0e4a8b2109939c76}{Empty\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q)
+\item 
+void \hyperlink{queue_8c_adab53421c55a344db90ab7617fe2c8fa}{Set\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q, int key\+Size)
+\item 
+int \hyperlink{queue_8c_ad41dc0227d6992756c34c9026f65455d}{Push\+Back\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q, \hyperlink{queue_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$key)
+\item 
+int \hyperlink{queue_8c_af8c38aa19de2063f95ca906b6118d151}{Push\+Front\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q, \hyperlink{queue_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$key)
+\item 
+\hyperlink{queue_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$ \hyperlink{queue_8c_a8d3968ae24d89807853eff5feb024652}{First\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q)
+\item 
+\hyperlink{queue_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$ \hyperlink{queue_8c_a16b87f430ebdf2b9c6e4266511d16e61}{Pop\+Front\+Key\+Q} (\hyperlink{queue_8h_a77e61d46797ba865eb698db19b1cdbfa}{Queue\+Key\+Pt} pt\+Q)
 \item 
 int \hyperlink{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 \end{DoxyCompactItemize}
 
 
 \subsection{Документација функције}
+\hypertarget{queue_8c_acb6e14705a07b56b590762983af804b6}{\index{queue.\+c@{queue.\+c}!Empty\+File\+Q@{Empty\+File\+Q}}
+\index{Empty\+File\+Q@{Empty\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Empty\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Empty\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_acb6e14705a07b56b590762983af804b6}
+
+
+Дефиниција у линији 12 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a7a1f556afd05cb9f0e4a8b2109939c76}{\index{queue.\+c@{queue.\+c}!Empty\+Key\+Q@{Empty\+Key\+Q}}
+\index{Empty\+Key\+Q@{Empty\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Empty\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Empty\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a7a1f556afd05cb9f0e4a8b2109939c76}
+
+
+Дефиниција у линији 97 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a747265e67420e9c2f5e17225f52446a1}{\index{queue.\+c@{queue.\+c}!First\+File\+Q@{First\+File\+Q}}
+\index{First\+File\+Q@{First\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{First\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ First\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a747265e67420e9c2f5e17225f52446a1}
+
+
+Дефиниција у линији 71 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a8d3968ae24d89807853eff5feb024652}{\index{queue.\+c@{queue.\+c}!First\+Key\+Q@{First\+Key\+Q}}
+\index{First\+Key\+Q@{First\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{First\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32}$\ast$ First\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a8d3968ae24d89807853eff5feb024652}
+
+
+Дефиниција у линији 155 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a4d2d7cd584c8b8e91258e1cb9e74730c}{\index{queue.\+c@{queue.\+c}!Initalize\+File\+Q@{Initalize\+File\+Q}}
+\index{Initalize\+File\+Q@{Initalize\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Initalize\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}void Initalize\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a4d2d7cd584c8b8e91258e1cb9e74730c}
+
+
+Дефиниција у линији 6 датотеке queue.\+c.
+
 \hypertarget{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{queue.\+c@{queue.\+c}!main@{main}}
 \index{main@{main}!queue.\+c@{queue.\+c}}
 \subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
@@ -19,5 +100,87 @@ int \hyperlink{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
 )}}\label{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
 
 
-Дефиниција у линији 14 датотеке queue.\+c.
+Дефиниција у линији 179 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a28b433e84c3db7c81354134d0c2ba758}{\index{queue.\+c@{queue.\+c}!Pop\+Front\+File\+Q@{Pop\+Front\+File\+Q}}
+\index{Pop\+Front\+File\+Q@{Pop\+Front\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Pop\+Front\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Pop\+Front\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a28b433e84c3db7c81354134d0c2ba758}
+
+
+Дефиниција у линији 78 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a16b87f430ebdf2b9c6e4266511d16e61}{\index{queue.\+c@{queue.\+c}!Pop\+Front\+Key\+Q@{Pop\+Front\+Key\+Q}}
+\index{Pop\+Front\+Key\+Q@{Pop\+Front\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Pop\+Front\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32}$\ast$ Pop\+Front\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a16b87f430ebdf2b9c6e4266511d16e61}
+
+
+Дефиниција у линији 161 датотеке queue.\+c.
+
+\hypertarget{queue_8c_a66f0741d5d5241c7e0bc451c8e569546}{\index{queue.\+c@{queue.\+c}!Push\+Back\+File\+Q@{Push\+Back\+File\+Q}}
+\index{Push\+Back\+File\+Q@{Push\+Back\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Push\+Back\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Push\+Back\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q, }
+\item[{char $\ast$}]{name\+File}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a66f0741d5d5241c7e0bc451c8e569546}
+
+
+Дефиниција у линији 19 датотеке queue.\+c.
+
+\hypertarget{queue_8c_ad41dc0227d6992756c34c9026f65455d}{\index{queue.\+c@{queue.\+c}!Push\+Back\+Key\+Q@{Push\+Back\+Key\+Q}}
+\index{Push\+Back\+Key\+Q@{Push\+Back\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Push\+Back\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Push\+Back\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q, }
+\item[{{\bf U\+Int32} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_ad41dc0227d6992756c34c9026f65455d}
+
+
+Дефиниција у линији 109 датотеке queue.\+c.
+
+\hypertarget{queue_8c_acd760e12e887a92a9ae4895e10177eff}{\index{queue.\+c@{queue.\+c}!Push\+Front\+File\+Q@{Push\+Front\+File\+Q}}
+\index{Push\+Front\+File\+Q@{Push\+Front\+File\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Push\+Front\+File\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Push\+Front\+File\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+File\+Pt}}]{pt\+Q, }
+\item[{char $\ast$}]{name\+File}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_acd760e12e887a92a9ae4895e10177eff}
+
+
+Дефиниција у линији 45 датотеке queue.\+c.
+
+\hypertarget{queue_8c_af8c38aa19de2063f95ca906b6118d151}{\index{queue.\+c@{queue.\+c}!Push\+Front\+Key\+Q@{Push\+Front\+Key\+Q}}
+\index{Push\+Front\+Key\+Q@{Push\+Front\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Push\+Front\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}int Push\+Front\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q, }
+\item[{{\bf U\+Int32} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_af8c38aa19de2063f95ca906b6118d151}
+
+
+Дефиниција у линији 130 датотеке queue.\+c.
+
+\hypertarget{queue_8c_adab53421c55a344db90ab7617fe2c8fa}{\index{queue.\+c@{queue.\+c}!Set\+Key\+Q@{Set\+Key\+Q}}
+\index{Set\+Key\+Q@{Set\+Key\+Q}!queue.\+c@{queue.\+c}}
+\subsubsection[{Set\+Key\+Q}]{\setlength{\rightskip}{0pt plus 5cm}void Set\+Key\+Q (
+\begin{DoxyParamCaption}
+\item[{{\bf Queue\+Key\+Pt}}]{pt\+Q, }
+\item[{int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_adab53421c55a344db90ab7617fe2c8fa}
+
+
+Дефиниција у линији 104 датотеке queue.\+c.
 

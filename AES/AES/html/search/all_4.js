@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['next',['next',['../struct_node_file.html#a6e3ae14a411e5a0f5573bd9deb9b4a43',1,'NodeFile']]],
-  ['nodefile',['NodeFile',['../struct_node_file.html',1,'NodeFile'],['../queue_8h.html#a12fec3d1666dfdc1bb63f8ba0ab8778c',1,'NodeFile():&#160;queue.h']]],
-  ['nodefilept',['NodeFilePt',['../queue_8h.html#a21054bd6fff2213f6e09f4e5b11300b9',1,'queue.h']]]
+  ['filename',['fileName',['../struct_node_file.html#a25c8761bc1f523fe6a53db546ae83add',1,'NodeFile']]],
+  ['firstfileq',['FirstFileQ',['../queue_8c.html#a747265e67420e9c2f5e17225f52446a1',1,'FirstFileQ(QueueFilePt ptQ):&#160;queue.c'],['../queue_8h.html#a747265e67420e9c2f5e17225f52446a1',1,'FirstFileQ(QueueFilePt ptQ):&#160;queue.c']]],
+  ['firstkeyq',['FirstKeyQ',['../queue_8c.html#a8d3968ae24d89807853eff5feb024652',1,'FirstKeyQ(QueueKeyPt ptQ):&#160;queue.c'],['../queue_8h.html#a8d3968ae24d89807853eff5feb024652',1,'FirstKeyQ(QueueKeyPt ptQ):&#160;queue.c']]]
 ];

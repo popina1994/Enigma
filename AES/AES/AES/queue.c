@@ -64,6 +64,7 @@ int PushFrontFileQ(QueueFilePt ptQ, char *nameFile) {
 		newNode->next = ptQ->begin;
 		ptQ->begin = newNode;
 	}
+	return 1; // sve dobro proslo
 }
 
 //vraca ime prvog fajla u listi
@@ -148,6 +149,7 @@ int PushFrontKeyQ(QueueKeyPt ptQ, UInt32 *key) {
 		newNode->next = ptQ->begin;
 		ptQ->begin = newNode;
 	}
+	return 1; // sve dobro proslo
 }
 
 UInt32 *FirstKeyQ(QueueKeyPt ptQ) {
@@ -174,9 +176,6 @@ UInt32 *PopFrontKeyQ(QueueKeyPt ptQ) {
 	return  s;
 }
 
-
 int main() {
-	NodeFile node;
-	return 0;
-	
+
 }

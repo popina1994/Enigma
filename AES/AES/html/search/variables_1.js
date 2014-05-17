@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['next',['next',['../struct_node_file.html#a6e3ae14a411e5a0f5573bd9deb9b4a43',1,'NodeFile']]]
+  ['end',['end',['../struct_queue_file.html#aa58dc8760d68b68e762269d2673913c0',1,'QueueFile::end()'],['../struct_queue_key.html#afc101427178b779ea4159c4e0f6829b6',1,'QueueKey::end()']]]
 ];

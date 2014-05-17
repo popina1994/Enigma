@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../queue_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'queue.c']]]
+  ['emptyfileq',['EmptyFileQ',['../queue_8c.html#acb6e14705a07b56b590762983af804b6',1,'EmptyFileQ(QueueFilePt ptQ):&#160;queue.c'],['../queue_8h.html#acb6e14705a07b56b590762983af804b6',1,'EmptyFileQ(QueueFilePt ptQ):&#160;queue.c']]],
+  ['emptykeyq',['EmptyKeyQ',['../queue_8c.html#a7a1f556afd05cb9f0e4a8b2109939c76',1,'EmptyKeyQ(QueueKeyPt ptQ):&#160;queue.c'],['../queue_8h.html#a7a1f556afd05cb9f0e4a8b2109939c76',1,'EmptyKeyQ(QueueKeyPt ptQ):&#160;queue.c']]]
 ];

@@ -7,10 +7,24 @@
 
 var indexSectionsWithContent =
 {
+  0: "_abefikmnpqsu",
+  1: "nq",
+  2: "aq",
+  3: "efimps",
+  4: "befkn",
+  5: "nqu",
+  6: "_"
 };
 
 var indexSectionNames =
 {
+  0: "all",
+  1: "classes",
+  2: "files",
+  3: "functions",
+  4: "variables",
+  5: "typedefs",
+  6: "defines"
 };
 
 function convertToId(search)

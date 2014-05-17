@@ -88,17 +88,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   <div class="summary">
 <a href="#nested-classes">Структуре</a> &#124;
 <a href="#define-members">Дефиниције</a> &#124;
-<a href="#typedef-members">Дефиниције типова</a>  </div>
+<a href="#typedef-members">Дефиниције типова</a> &#124;
+<a href="#func-members">Функције</a>  </div>
   <div class="headertitle">
 <div class="title">queue.h Референца датотеке</div>  </div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
 <p><a href="queue_8h_source.html">Иди на изворни код овог фајла.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Структуре</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node_file.html">NodeFile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_queue_file.html">QueueFile</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_node_key.html">NodeKey</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_queue_key.html">QueueKey</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -108,12 +118,57 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Дефиниције типова</h2></td></tr>
+<tr class="memitem:ab6132671e695a54d5c39ed9ce1536087"><td class="memItemLeft" align="right" valign="top">typedef unsigned __int32&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a></td></tr>
+<tr class="separator:ab6132671e695a54d5c39ed9ce1536087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12fec3d1666dfdc1bb63f8ba0ab8778c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_node_file.html">NodeFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a12fec3d1666dfdc1bb63f8ba0ab8778c">NodeFile</a></td></tr>
 <tr class="separator:a12fec3d1666dfdc1bb63f8ba0ab8778c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21054bd6fff2213f6e09f4e5b11300b9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_node_file.html">NodeFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a21054bd6fff2213f6e09f4e5b11300b9">NodeFilePt</a></td></tr>
 <tr class="separator:a21054bd6fff2213f6e09f4e5b11300b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a838818690261fceaa2e04d53e1b17eab"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_queue_file.html">QueueFile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a838818690261fceaa2e04d53e1b17eab">QueueFile</a></td></tr>
+<tr class="separator:a838818690261fceaa2e04d53e1b17eab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a410f32b2d9b233b4fc66864926d200dd"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_queue_file.html">QueueFile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a></td></tr>
+<tr class="separator:a410f32b2d9b233b4fc66864926d200dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89b0a7b46a5e68c1a780464c7c1d6d53"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_node_key.html">NodeKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a89b0a7b46a5e68c1a780464c7c1d6d53">NodeKey</a></td></tr>
+<tr class="separator:a89b0a7b46a5e68c1a780464c7c1d6d53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3bac5142f1f85d4e0969776aea360873"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_node_key.html">NodeKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a3bac5142f1f85d4e0969776aea360873">NodeKeyPt</a></td></tr>
+<tr class="separator:a3bac5142f1f85d4e0969776aea360873"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1df42ca120c599cebb919660ee4e673b"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_queue_key.html">QueueKey</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a1df42ca120c599cebb919660ee4e673b">QueueKey</a></td></tr>
+<tr class="separator:a1df42ca120c599cebb919660ee4e673b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77e61d46797ba865eb698db19b1cdbfa"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="struct_queue_key.html">QueueKey</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a></td></tr>
+<tr class="separator:a77e61d46797ba865eb698db19b1cdbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функције</h2></td></tr>
+<tr class="memitem:a6c7698337616e7f4ff297b74feb7a88b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a6c7698337616e7f4ff297b74feb7a88b">InitializeFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ)</td></tr>
+<tr class="separator:a6c7698337616e7f4ff297b74feb7a88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb6e14705a07b56b590762983af804b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#acb6e14705a07b56b590762983af804b6">EmptyFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ)</td></tr>
+<tr class="separator:acb6e14705a07b56b590762983af804b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66f0741d5d5241c7e0bc451c8e569546"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a66f0741d5d5241c7e0bc451c8e569546">PushBackFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ, char *nameFile)</td></tr>
+<tr class="separator:a66f0741d5d5241c7e0bc451c8e569546"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd760e12e887a92a9ae4895e10177eff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#acd760e12e887a92a9ae4895e10177eff">PushFrontFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ, char *nameFile)</td></tr>
+<tr class="separator:acd760e12e887a92a9ae4895e10177eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a747265e67420e9c2f5e17225f52446a1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a747265e67420e9c2f5e17225f52446a1">FirstFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ)</td></tr>
+<tr class="separator:a747265e67420e9c2f5e17225f52446a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28b433e84c3db7c81354134d0c2ba758"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a28b433e84c3db7c81354134d0c2ba758">PopFrontFileQ</a> (<a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a> ptQ)</td></tr>
+<tr class="separator:a28b433e84c3db7c81354134d0c2ba758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1f556afd05cb9f0e4a8b2109939c76"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a7a1f556afd05cb9f0e4a8b2109939c76">EmptyKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ)</td></tr>
+<tr class="separator:a7a1f556afd05cb9f0e4a8b2109939c76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adab53421c55a344db90ab7617fe2c8fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#adab53421c55a344db90ab7617fe2c8fa">SetKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ, int keySize)</td></tr>
+<tr class="separator:adab53421c55a344db90ab7617fe2c8fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41dc0227d6992756c34c9026f65455d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#ad41dc0227d6992756c34c9026f65455d">PushBackKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ, <a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *key)</td></tr>
+<tr class="separator:ad41dc0227d6992756c34c9026f65455d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8c38aa19de2063f95ca906b6118d151"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#af8c38aa19de2063f95ca906b6118d151">PushFrontKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ, <a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *key)</td></tr>
+<tr class="separator:af8c38aa19de2063f95ca906b6118d151"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3968ae24d89807853eff5feb024652"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a8d3968ae24d89807853eff5feb024652">FirstKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ)</td></tr>
+<tr class="separator:a8d3968ae24d89807853eff5feb024652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16b87f430ebdf2b9c6e4266511d16e61"><td class="memItemLeft" align="right" valign="top"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="queue_8h.html#a16b87f430ebdf2b9c6e4266511d16e61">PopFrontKeyQ</a> (<a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a> ptQ)</td></tr>
+<tr class="separator:a16b87f430ebdf2b9c6e4266511d16e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Документација дефиниције</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Опширније</h2>
+<div class="textblock"><dl class="section author"><dt>Аутор</dt><dd>Djordje Zivanovic </dd></dl>
+
+<p>Дефиниција у датотеци <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+</div><h2 class="groupheader">Документација дефиниције</h2>
 <a class="anchor" id="a411c46599e926f8cdf49c63957255359"></a>
 <div class="memitem">
 <div class="memproto">
@@ -124,7 +179,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
       </table>
 </div><div class="memdoc">
 
-<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00004">4</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00008">8</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
 
 </div>
 </div>
@@ -139,7 +194,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
       </table>
 </div><div class="memdoc">
 
-<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00006">6</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00015">15</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
 
 </div>
 </div>
@@ -153,14 +208,373 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
       </table>
 </div><div class="memdoc">
 
-<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00008">8</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00017">17</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a89b0a7b46a5e68c1a780464c7c1d6d53"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_node_key.html">NodeKey</a> <a class="el" href="struct_node_key.html">NodeKey</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00030">30</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3bac5142f1f85d4e0969776aea360873"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="struct_node_key.html">NodeKey</a>* <a class="el" href="queue_8h.html#a3bac5142f1f85d4e0969776aea360873">NodeKeyPt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00032">32</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a838818690261fceaa2e04d53e1b17eab"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_queue_file.html">QueueFile</a>  <a class="el" href="struct_queue_file.html">QueueFile</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a410f32b2d9b233b4fc66864926d200dd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="struct_queue_file.html">QueueFile</a>* <a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00028">28</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1df42ca120c599cebb919660ee4e673b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_queue_key.html">QueueKey</a>  <a class="el" href="struct_queue_key.html">QueueKey</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a77e61d46797ba865eb698db19b1cdbfa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="struct_queue_key.html">QueueKey</a>* <a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00044">44</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab6132671e695a54d5c39ed9ce1536087"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned __int32 <a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8h_source.html#l00013">13</a> датотеке <a class="el" href="queue_8h_source.html">queue.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Документација функције</h2>
+<a class="anchor" id="acb6e14705a07b56b590762983af804b6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EmptyFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00012">12</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a1f556afd05cb9f0e4a8b2109939c76"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EmptyKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00097">97</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a747265e67420e9c2f5e17225f52446a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* FirstFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00071">71</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d3968ae24d89807853eff5feb024652"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a>* FirstKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00155">155</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6c7698337616e7f4ff297b74feb7a88b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitializeFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a28b433e84c3db7c81354134d0c2ba758"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* PopFrontFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00078">78</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16b87f430ebdf2b9c6e4266511d16e61"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a>* PopFrontKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00161">161</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a66f0741d5d5241c7e0bc451c8e569546"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PushBackFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nameFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00019">19</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad41dc0227d6992756c34c9026f65455d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PushBackKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00109">109</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acd760e12e887a92a9ae4895e10177eff"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PushFrontFileQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a410f32b2d9b233b4fc66864926d200dd">QueueFilePt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>nameFile</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00045">45</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af8c38aa19de2063f95ca906b6118d151"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PushFrontKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00130">130</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="adab53421c55a344db90ab7617fe2c8fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetKeyQ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="queue_8h.html#a77e61d46797ba865eb698db19b1cdbfa">QueueKeyPt</a>&#160;</td>
+          <td class="paramname"><em>ptQ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keySize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Дефиниција у линији <a class="el" href="queue_8c_source.html#l00104">104</a> датотеке <a class="el" href="queue_8c_source.html">queue.c</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Направљено Sat May 17 2014 19:33:03 за AES помоћу &#160;<a href="http://www.doxygen.org/index.html">
+Направљено Sun May 18 2014 01:11:04 за AES помоћу &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -1,8 +1,6 @@
 ﻿/**
 * @file queue.h
-* @author Ђорђе Живановић
-* @brief Садржи дефиниције листи кључева и листи имена фајлова. 
-* Садржи функције за рад са листама @see
+* @author Djordje Zivanovic
 */
 
 #ifndef _queue_h_
@@ -19,7 +17,7 @@ typedef struct NodeFile NodeFile;
 typedef NodeFile *NodeFilePt;
 
 struct NodeFile{
-	char *fileName; /**< Име фајла*/
+	char *fileName; 
 	NodeFilePt next;
 };
 
