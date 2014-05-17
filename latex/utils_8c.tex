@@ -1,0 +1,69 @@
+\hypertarget{utils_8c}{\section{C\+:/\+Users/popina/\+Documents/enigma/utils.c Референца датотеке}
+\label{utils_8c}\index{C\+:/\+Users/popina/\+Documents/enigma/utils.\+c@{C\+:/\+Users/popina/\+Documents/enigma/utils.\+c}}
+}
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$ctype.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}utils.\+h\char`\"{}}\\*
+\subsection*{Функције}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{utils_8c_a362508df5a90d1f33b14655a6dd96569}{hex\+\_\+2\+\_\+bin} (const char $\ast$const hex\+\_\+key, char bin\+\_\+key\mbox{[}$\,$\mbox{]}, int key\+\_\+length)
+\begin{DoxyCompactList}\small\item\em Funkcija prebacuje hex string u binarnu reprezentaciju i pise ga u niz bin\+\_\+key. \end{DoxyCompactList}\item 
+char \hyperlink{utils_8c_a736d4e543ba3a0cd0041c96f978ec630}{hex\+\_\+2\+\_\+code} (char hex)
+\begin{DoxyCompactList}\small\item\em Prima karakter iz hex stringa i vraca 4 bita koja predstavlja. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Документација функције}
+\hypertarget{utils_8c_a362508df5a90d1f33b14655a6dd96569}{\index{utils.\+c@{utils.\+c}!hex\+\_\+2\+\_\+bin@{hex\+\_\+2\+\_\+bin}}
+\index{hex\+\_\+2\+\_\+bin@{hex\+\_\+2\+\_\+bin}!utils.\+c@{utils.\+c}}
+\subsubsection[{hex\+\_\+2\+\_\+bin}]{\setlength{\rightskip}{0pt plus 5cm}int hex\+\_\+2\+\_\+bin (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$const}]{hex\+\_\+key, }
+\item[{char}]{bin\+\_\+key\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{key\+\_\+length}
+\end{DoxyParamCaption}
+)}}\label{utils_8c_a362508df5a90d1f33b14655a6dd96569}
+
+
+Funkcija prebacuje hex string u binarnu reprezentaciju i pise ga u niz bin\+\_\+key. 
+
+Funkciji se prosledi kljuc kao hex string, kao i duzina kljuca. Posle provere da li string odgovara formatu, ona u bin\+\_\+key upisuje binarnu reprezentaciju kljuca.
+
+
+\begin{DoxyParams}{Параметри}
+{\em hex\+\_\+key} & String sa kljucem u hex formatu. Njegova duzina mora odgovarati key\+\_\+length parametru, koji je u bitovima. Npr. a6be1f duzine24. \\
+\hline
+{\em bin\+\_\+key} & Niz karaktera gde ce se upisati kljuc posle konverzije. Njegova velicina mora biti ista kao key\+\_\+length u bitovima, inace dolazi do buffer overflow-\/a. Funkcija ne proverava da li je ovo ispunjeno. \\
+\hline
+{\em key\+\_\+length} & Duzina kljuca u bitima. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+Kod greske do koje je doslo\+:~\newline
+0\+: Nema greske~\newline
+1\+: key\+\_\+length nije deljiv sa 8~\newline
+2\+: Duzina hex\+\_\+key-\/a ne odgovara key\+\_\+length-\/u~\newline
+3\+: U hex\+\_\+key-\/u se nalaze karakteri koji nisu hex cifre~\newline
+
+\end{DoxyReturn}
+\hypertarget{utils_8c_a736d4e543ba3a0cd0041c96f978ec630}{\index{utils.\+c@{utils.\+c}!hex\+\_\+2\+\_\+code@{hex\+\_\+2\+\_\+code}}
+\index{hex\+\_\+2\+\_\+code@{hex\+\_\+2\+\_\+code}!utils.\+c@{utils.\+c}}
+\subsubsection[{hex\+\_\+2\+\_\+code}]{\setlength{\rightskip}{0pt plus 5cm}char hex\+\_\+2\+\_\+code (
+\begin{DoxyParamCaption}
+\item[{char}]{hex}
+\end{DoxyParamCaption}
+)}}\label{utils_8c_a736d4e543ba3a0cd0041c96f978ec630}
+
+
+Prima karakter iz hex stringa i vraca 4 bita koja predstavlja. 
+
+Funkcija prima bilo koju hex cifru 0-\/9, a-\/f, A-\/\+F i vraca karakter sa kodom 0x0\+Y u hexu, ili 0xff, ako karakter nije validan.
+
+
+\begin{DoxyParams}{Параметри}
+{\em hex} & Hex cifra za konverziju. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+Karakter cija su prva 4 bita 0, a ostali odredjeni argumentom hex, ili 0xff, ako karakter nije hex cifra 
+\end{DoxyReturn}
