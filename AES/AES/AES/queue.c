@@ -106,14 +106,20 @@ void SetKeyQ(QueueKeyPt ptQ, int keySize) {
 }
 
 // stavlja kljuc na kraj liste, vraca 1 ako je uspesno, 0 ako je neuspesno
-int PushBackKeyQ(QueueKeyPt ptQ, UInt32 *key) {
+int PushBackKeyQ(QueueKeyPt ptQ, char *key) {
 	NodeKeyPt newNode;
+	int cnt, keyByte = ptQ->keySize / 8;
 
 	newNode = (NodeKeyPt)malloc(sizeof(NodeKey));
 	if (newNode == NULL) // nema memorije na heap-u
 		return 0;
 
-	memcpy(newNode->key, key, ptQ->keySize / 8);
+	newNode->key = (char*)malloc(keyByte);
+	if (newNode->key == NULL) // nema memorije na heap-u
+		return 0;
+	
+	for (cnt = 0; cnt < keyByte; cnt++)
+		newNode->key[cnt] = key[cnt];
 	newNode->next = NULL;
 
 	if (ptQ->end == NULL) {
@@ -127,18 +133,21 @@ int PushBackKeyQ(QueueKeyPt ptQ, UInt32 *key) {
 	return 1; // sve dobro proslo
 }
 	
-int PushFrontKeyQ(QueueKeyPt ptQ, UInt32 *key) {
+//stavlja na pocetak liste kljuceva
+int PushFrontKeyQ(QueueKeyPt ptQ, char *key) {
 	NodeKeyPt newNode; //novi cvor
+	int cnt, keyByte = ptQ->keySize;
 
 	newNode = (NodeKeyPt)malloc(sizeof(NodeKey));
 	if (newNode == NULL) // nema memorije na heap-u
 		return 0;
 
-	newNode->key = (UInt32*)malloc(ptQ->keySize);
+	newNode->key = (char*)malloc(keyByte);
 	if (newNode->key == NULL) // nema memorije na hipu
 		return 0;
 
-	memcpy(newNode->key, key, ptQ->keySize / 8);
+	for (cnt = 0; cnt < keyByte; cnt++)
+		newNode->key[cnt] = key[cnt];
 	newNode->next = NULL;
 
 	if (ptQ->end == NULL) {
@@ -152,15 +161,18 @@ int PushFrontKeyQ(QueueKeyPt ptQ, UInt32 *key) {
 	return 1; // sve dobro proslo
 }
 
-UInt32 *FirstKeyQ(QueueKeyPt ptQ) {
+// vraca prvi cvor iz liste kljuceva
+char *FirstKeyQ(QueueKeyPt ptQ) {
 	if (ptQ->begin == NULL)
 		return NULL;
 	return ptQ->begin->key;
 }
 
-UInt32 *PopFrontKeyQ(QueueKeyPt ptQ) {
+
+//vraca prvi cvor iz liste kljuceva, memorija za kljuc nije dealocirana!
+char *PopFrontKeyQ(QueueKeyPt ptQ) {
 	NodeKeyPt ptNode;
-	UInt32 *s;
+	char *s;
 
 	if (ptQ->begin == NULL) {
 		printf("ERROR, LISTA JE PRAZNA");

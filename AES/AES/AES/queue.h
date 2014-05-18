@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef unsigned __int32 UInt32;
-
 typedef struct NodeFile NodeFile;
 
 typedef NodeFile *NodeFilePt;
@@ -32,7 +30,7 @@ typedef struct NodeKey NodeKey;
 typedef NodeKey *NodeKeyPt;
 
 struct NodeKey {
-	UInt32 *key;
+	char *key;
 	NodeKeyPt next;
 };
 
@@ -63,12 +61,12 @@ int EmptyKeyQ(QueueKeyPt ptQ);
 
 void SetKeyQ(QueueKeyPt ptQ, int keySize);
 
-int PushBackKeyQ(QueueKeyPt ptQ, UInt32 *key);
+int PushBackKeyQ(QueueKeyPt ptQ, char *key);
 
-int PushFrontKeyQ(QueueKeyPt ptQ, UInt32 *key);
+int PushFrontKeyQ(QueueKeyPt ptQ, char *key);
 
-UInt32 *FirstKeyQ(QueueKeyPt ptQ);
+char *FirstKeyQ(QueueKeyPt ptQ);
 
-UInt32 *PopFrontKeyQ(QueueKeyPt ptQ);
+char *PopFrontKeyQ(QueueKeyPt ptQ);
 
 #endif
