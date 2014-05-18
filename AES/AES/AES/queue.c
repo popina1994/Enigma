@@ -112,7 +112,7 @@ void SetKeyQ(QueueKeyPt ptQ, int keySize) {
 }
 
 // stavlja kljuc na kraj liste, vraca 1 ako je uspesno, 0 ako je neuspesno
-int PushBackKeyQ(QueueKeyPt ptQ, char *key) {
+int PushBackKeyQ(QueueKeyPt ptQ, UChar *key) {
 	NodeKeyPt newNode;
 	int cnt, keyByte = ptQ->keySize / 8;
 
@@ -120,7 +120,7 @@ int PushBackKeyQ(QueueKeyPt ptQ, char *key) {
 	if (newNode == NULL) // nema memorije na heap-u
 		return 0;
 
-	newNode->key = (char*)malloc(keyByte);
+	newNode->key = (UChar*)malloc(keyByte);
 	if (newNode->key == NULL) // nema memorije na heap-u
 		return 0;
 	
@@ -140,7 +140,7 @@ int PushBackKeyQ(QueueKeyPt ptQ, char *key) {
 }
 	
 //stavlja na pocetak liste kljuceva
-int PushFrontKeyQ(QueueKeyPt ptQ, char *key) {
+int PushFrontKeyQ(QueueKeyPt ptQ, UChar *key) {
 	NodeKeyPt newNode; //novi cvor
 	int cnt, keyByte = ptQ->keySize;
 
@@ -148,7 +148,7 @@ int PushFrontKeyQ(QueueKeyPt ptQ, char *key) {
 	if (newNode == NULL) // nema memorije na heap-u
 		return 0;
 
-	newNode->key = (char*)malloc(keyByte);
+	newNode->key = (UChar*)malloc(keyByte);
 	if (newNode->key == NULL) // nema memorije na hipu
 		return 0;
 
@@ -168,7 +168,7 @@ int PushFrontKeyQ(QueueKeyPt ptQ, char *key) {
 }
 
 // vraca prvi cvor iz liste kljuceva
-char *FirstKeyQ(QueueKeyPt ptQ) {
+UChar *FirstKeyQ(QueueKeyPt ptQ) {
 	if (ptQ->begin == NULL)
 		return NULL;
 	return ptQ->begin->key;
@@ -176,9 +176,9 @@ char *FirstKeyQ(QueueKeyPt ptQ) {
 
 
 //vraca prvi cvor iz liste kljuceva, memorija za kljuc nije dealocirana!
-char *PopFrontKeyQ(QueueKeyPt ptQ) {
+UChar *PopFrontKeyQ(QueueKeyPt ptQ) {
 	NodeKeyPt ptNode;
-	char *s;
+	UChar *s;
 
 	if (ptQ->begin == NULL) {
 		printf("ERROR, LISTA JE PRAZNA");
