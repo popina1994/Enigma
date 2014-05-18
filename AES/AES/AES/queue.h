@@ -57,6 +57,8 @@ char *PopFrontFileQ(QueueFilePt ptQ);
 
 /* Lista kljuceva */
 
+void InitializeKeyQ(QueueKeyPt ptQ);
+
 int EmptyKeyQ(QueueKeyPt ptQ);
 
 void SetKeyQ(QueueKeyPt ptQ, int keySize);

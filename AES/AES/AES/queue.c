@@ -93,6 +93,12 @@ char *PopFrontFileQ(QueueFilePt ptQ) {
 	return  s;
 }
 
+// postavlja begin i end na NULL
+void InitializeKeyQ(QueueKeyPt ptQ) {
+	ptQ->begin = NULL;
+	ptQ->end = NULL;
+}
+
 // vraca 1 ako je lista prazna, 0 inace
 int EmptyKeyQ(QueueKeyPt ptQ) {
 	if (ptQ->begin == NULL)
