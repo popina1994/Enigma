@@ -193,7 +193,3 @@ UChar *PopFrontKeyQ(QueueKeyPt ptQ) {
 	free(ptNode);
 	return  s;
 }
-
-int main() {
-
-}

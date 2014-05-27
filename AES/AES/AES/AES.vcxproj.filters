@@ -23,8 +23,19 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="queue.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="aes.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="queue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ulaz.in">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="ulaz.in.crypt">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

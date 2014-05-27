@@ -72,7 +72,12 @@
     <ClCompile Include="queue.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="aes.h" />
     <ClInclude Include="queue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ulaz.in" />
+    <None Include="ulaz.in.crypt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
