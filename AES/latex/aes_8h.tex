@@ -1,0 +1,1042 @@
+\hypertarget{aes_8h}{\section{A\+E\+S/aes.h Референца датотеке}
+\label{aes_8h}\index{A\+E\+S/aes.\+h@{A\+E\+S/aes.\+h}}
+}
+
+
+Фајл садржи функције за шифорвање датотека АЕС-\/ом.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+\subsection*{Дефиниције}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{aes_8h_a411c46599e926f8cdf49c63957255359}{\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E}
+\item 
+\#define \hyperlink{aes_8h_aab74cd0f85d2887b21834371671ef918}{\+\_\+aes\+\_\+h\+\_\+}
+\item 
+\#define \hyperlink{aes_8h_a43ff16ab6b9bd24602669bf844cc81f7}{N\+U\+M\+\_\+\+R\+O\+W}~4
+\item 
+\#define \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}~16
+\item 
+\#define \hyperlink{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N}~214
+\item 
+\#define \hyperlink{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T}~\char`\"{}.crypt\char`\"{}
+\item 
+\#define \hyperlink{aes_8h_ae5409047cf0fceba4481b7e06c842b10}{D\+I\+G\+I\+T\+\_\+\+N\+U\+M}~10
+\end{DoxyCompactItemize}
+\subsection*{Дефиниције типова}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned \+\_\+\+\_\+int32 \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}
+\item 
+typedef unsigned \+\_\+\+\_\+int8 \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char}
+\end{DoxyCompactItemize}
+\subsection*{Функције}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_a8b5f3e5be9ef9141f608ea5f455c9045}{U\+Char\+To\+U\+Int32} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} byte\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Претвара низ 4 бајта у \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a61178d048e1a9e5320290c764e6b25cd}{Add\+Round\+Key} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}, const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} key\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Врши операцију еклузивне дисјункције блока бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} и кључа. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a77529d2c93011d18f738a210783f3362}{Sub\+Bytes} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Мења вредност сваког појединачног бајта из {\ttfamily state} одговарајућом вредношћу из \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\+\_\+\+B\+O\+X}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_aa116f5c396e0ac94147ee711e24906af}{Inv\+Sub\+Bytes} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Мења вредност сваког појединачног бајта из {\ttfamily state} одговарајућом вредношћу из \hyperlink{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}{I\+N\+V\+S\+\_\+\+B\+O\+X}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_ab2370c8f7e2864610060a618e32e0a39}{Shift\+Rows} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ротира бајтове у врстама, у i-\/тој врсти за i места улево. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a0691b569c9d38deff434ba3b259916f1}{Inv\+Shift\+Rows} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Ротира бајтове у врстама, у i-\/тој врсти за i места удесно. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a390e2fa9bdb33429b8d8804a0cb53ce8}{Mix\+Columns} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Миксује колоне матрице бајтова {\ttfamily state}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a663692ae0b5723e1f91a93fdd5e07f8e}{Inv\+Mix\+Columns} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]})
+\begin{DoxyCompactList}\small\item\em Инверзно миксује колоне матрице бајтова {\ttfamily state}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a8a54c67c2e95fd6481a810f0d8ba8099}{Rot\+Word} (\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$word\+Pt)
+\begin{DoxyCompactList}\small\item\em 1-\/бајтна кружна ротација 4-\/бајтне(\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}) речи улево. \end{DoxyCompactList}\item 
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_ae42b375b0183763e33ef62fb03c41f4d}{Sub\+Word} (const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} word)
+\begin{DoxyCompactList}\small\item\em Замена сваког бајта 4-\/бајтне речи {\ttfamily word} одговарајућим бајтом из \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\+\_\+\+B\+O\+X}. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} key\mbox{[}$\,$\mbox{]}, \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$$\ast$w, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Развија кључ {\ttfamily key} у низ 4-\/бајтних кључева {\ttfamily w}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_ad7bd04e37ce32485ba137a85d8af1967}{Encrypt\+State} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} in\mbox{[}$\,$\mbox{]}, \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} out\mbox{[}$\,$\mbox{]}, const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} key\mbox{[}$\,$\mbox{]}, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Шифрује АЕС-\/ом низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} задат са {\ttfamily in} помоћу низа кључева {\ttfamily key} (добијених \hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion}) и уписује у {\ttfamily out}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_a04fa82fc5866faa97b820e9f610ac8a8}{Decrypt\+State} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} in\mbox{[}$\,$\mbox{]}, \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} out\mbox{[}$\,$\mbox{]}, const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} key\mbox{[}$\,$\mbox{]}, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Дешифрује АЕС-\/ом низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} задат са {\ttfamily in} помоћу низа кључева {\ttfamily key} (добијених \hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion}) и уписује у {\ttfamily out}. \end{DoxyCompactList}\item 
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_a18cf3834d6b4ccee85ac6a39617e0582}{Size\+Of\+File} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$name)
+\begin{DoxyCompactList}\small\item\em Враћа величину датотеке имена {\ttfamily name} која се налази у истом фолдеру у којем је програм. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_a43ffbb16820017200bc8c9ccfc867db9}{Read\+Data} (F\+I\+L\+E $\ast$f, \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]}, \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} $\ast$size\+To\+End)
+\begin{DoxyCompactList}\small\item\em Чита из датотеке {\ttfamily f} блок бајтова \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} и смешта у {\ttfamily state}. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_af85d6c7d108f3d11a373b45e4d17907c}{Write\+Data} (F\+I\+L\+E $\ast$f, const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Пише у датотеку {\ttfamily f} блок бајтова \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} из {\ttfamily state}. \end{DoxyCompactList}\item 
+void \hyperlink{aes_8h_abf754619bec46c9248838027681ac7c0}{U\+Int32\+To\+State} (const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} num, \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Преводи 4-\/бајтни број типа \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} у низ од 16 бајтова. \end{DoxyCompactList}\item 
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_a521be23a2bb2cc37ba145760644baf49}{State\+To\+U\+Int32} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Преводи низ од 16 бајтова у број од 4 бајта (\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}). \end{DoxyCompactList}\item 
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$ \hyperlink{aes_8h_a4f1ca53c57b6d7a4661e804b46e32556}{Cypher\+File\+Name} (const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$in\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Прави име шифроване датотеке од имена датотеке који треба да шифрује \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_af5e8e76552be6bdf6fc268e941e7d689}{De\+Cypher\+File\+Name} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$$\ast$in\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Враћа име датотеке које ће имати након што се дешифрује. \end{DoxyCompactList}\item 
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}{C\+R\+C32} (\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} crc, const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} state\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Враћа вредност C\+R\+C-\/а датог блока {\ttfamily state} од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} бајтова и {\ttfamily crc}. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_ac8533f426828343402334bddbd5c2fd6}{C\+R\+C\+Check} (F\+I\+L\+E $\ast$in, const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} key\mbox{[}$\,$\mbox{]}, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Врши проверу \hyperlink{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}{C\+R\+C32} функцијом, да ли је дошло до нежељених измена у шифрованој датотеци {\ttfamily in}. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_aeef4c046e96aadbcf550393490956df5}{Cypher\+A\+E\+S} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$$\ast$in\+File\+Name, const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} key\+In\mbox{[}$\,$\mbox{]}, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Шифрује датотеку са именом {\ttfamily $\ast$in\+File\+Name} помоћу кључа {\ttfamily key\+In}, величине {\ttfamily key\+Size}. \end{DoxyCompactList}\item 
+int \hyperlink{aes_8h_a53000b729ca739f488c255eec26a83aa}{Decypher\+A\+E\+S} (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} $\ast$$\ast$in\+File\+Name, const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} key\+In\mbox{[}$\,$\mbox{]}, const int key\+Size)
+\begin{DoxyCompactList}\small\item\em Дешифрује датотеку са именом {\ttfamily $\ast$in\+File\+Name} помоћу кључа {\ttfamily key\+In}, величине {\ttfamily key\+Size}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Променљиве}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\+\_\+\+B\+O\+X} \mbox{[}16\mbox{]}\mbox{[}16\mbox{]}
+\item 
+const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} \hyperlink{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}{I\+N\+V\+S\+\_\+\+B\+O\+X} \mbox{[}16\mbox{]}\mbox{[}16\mbox{]}
+\item 
+const \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char} \hyperlink{aes_8h_a6ab4b1b208628e5676af84b4757dd65f}{G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L} \mbox{[}256\mbox{]}\mbox{[}6\mbox{]}
+\item 
+const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_a4912edcacf7773d419635694252d800b}{R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T} \mbox{[}$\,$\mbox{]}
+\item 
+const \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} \hyperlink{aes_8h_a62cd387485ff345a0a513f5aae69ad15}{C\+R\+C32\+\_\+\+T\+A\+B\+L\+E} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Опширније}
+Фајл садржи функције за шифорвање датотека АЕС-\/ом. 
+
+\begin{DoxyAuthor}{Аутор}
+Ђорђе Живановић 
+\end{DoxyAuthor}
+
+
+Дефиниција у датотеци \hyperlink{aes_8h_source}{aes.\+h}.
+
+
+
+\subsection{Документација дефиниције}
+\hypertarget{aes_8h_aab74cd0f85d2887b21834371671ef918}{\index{aes.\+h@{aes.\+h}!\+\_\+aes\+\_\+h\+\_\+@{\+\_\+aes\+\_\+h\+\_\+}}
+\index{\+\_\+aes\+\_\+h\+\_\+@{\+\_\+aes\+\_\+h\+\_\+}!aes.\+h@{aes.\+h}}
+\subsubsection[{\+\_\+aes\+\_\+h\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+aes\+\_\+h\+\_\+}}\label{aes_8h_aab74cd0f85d2887b21834371671ef918}
+
+
+Дефиниција у линији 8 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a411c46599e926f8cdf49c63957255359}{\index{aes.\+h@{aes.\+h}!\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E@{\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E}}
+\index{\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E@{\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E}!aes.\+h@{aes.\+h}}
+\subsubsection[{\+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+C\+R\+T\+\_\+\+S\+E\+C\+U\+R\+E\+\_\+\+N\+O\+\_\+\+D\+E\+P\+R\+E\+C\+A\+T\+E}}\label{aes_8h_a411c46599e926f8cdf49c63957255359}
+
+
+Дефиниција у линији 6 датотеке aes.\+h.
+
+\hypertarget{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}{\index{aes.\+h@{aes.\+h}!C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T@{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T}}
+\index{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T@{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T}!aes.\+h@{aes.\+h}}
+\subsubsection[{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T~\char`\"{}.crypt\char`\"{}}}\label{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}
+Екстензија криптоване датотеке. 
+
+Дефиниција у линији 15 датотеке aes.\+h.
+
+\hypertarget{aes_8h_ae5409047cf0fceba4481b7e06c842b10}{\index{aes.\+h@{aes.\+h}!D\+I\+G\+I\+T\+\_\+\+N\+U\+M@{D\+I\+G\+I\+T\+\_\+\+N\+U\+M}}
+\index{D\+I\+G\+I\+T\+\_\+\+N\+U\+M@{D\+I\+G\+I\+T\+\_\+\+N\+U\+M}!aes.\+h@{aes.\+h}}
+\subsubsection[{D\+I\+G\+I\+T\+\_\+\+N\+U\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+G\+I\+T\+\_\+\+N\+U\+M~10}}\label{aes_8h_ae5409047cf0fceba4481b7e06c842b10}
+Број цифара у декадном систему. 
+
+Дефиниција у линији 16 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}{\index{aes.\+h@{aes.\+h}!M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N@{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N}}
+\index{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N@{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N}!aes.\+h@{aes.\+h}}
+\subsubsection[{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N~214}}\label{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}
+Максимална дужина имена датотеке у Windows-\/у 
+
+Дефиниција у линији 14 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a43ff16ab6b9bd24602669bf844cc81f7}{\index{aes.\+h@{aes.\+h}!N\+U\+M\+\_\+\+R\+O\+W@{N\+U\+M\+\_\+\+R\+O\+W}}
+\index{N\+U\+M\+\_\+\+R\+O\+W@{N\+U\+M\+\_\+\+R\+O\+W}!aes.\+h@{aes.\+h}}
+\subsubsection[{N\+U\+M\+\_\+\+R\+O\+W}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+R\+O\+W~4}}\label{aes_8h_a43ff16ab6b9bd24602669bf844cc81f7}
+Број врста у једном блоку. 
+
+Дефиниција у линији 12 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{\index{aes.\+h@{aes.\+h}!S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E@{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}}
+\index{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E@{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}!aes.\+h@{aes.\+h}}
+\subsubsection[{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E~16}}\label{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}
+Број бајтова у једном блоку 
+
+Дефиниција у линији 13 датотеке aes.\+h.
+
+
+
+\subsection{Документација дефиниције типа}
+\hypertarget{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{\index{aes.\+h@{aes.\+h}!U\+Char@{U\+Char}}
+\index{U\+Char@{U\+Char}!aes.\+h@{aes.\+h}}
+\subsubsection[{U\+Char}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned \+\_\+\+\_\+int8 {\bf U\+Char}}}\label{aes_8h_a36fec739165651cfd8d4d9306f2a3996}
+Ако unsigned int није 4 бита. 
+
+Дефиниција у линији 11 датотеке aes.\+h.
+
+\hypertarget{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{\index{aes.\+h@{aes.\+h}!U\+Int32@{U\+Int32}}
+\index{U\+Int32@{U\+Int32}!aes.\+h@{aes.\+h}}
+\subsubsection[{U\+Int32}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned \+\_\+\+\_\+int32 {\bf U\+Int32}}}\label{aes_8h_ab6132671e695a54d5c39ed9ce1536087}
+
+
+Дефиниција у линији 10 датотеке aes.\+h.
+
+
+
+\subsection{Документација функције}
+\hypertarget{aes_8h_a61178d048e1a9e5320290c764e6b25cd}{\index{aes.\+h@{aes.\+h}!Add\+Round\+Key@{Add\+Round\+Key}}
+\index{Add\+Round\+Key@{Add\+Round\+Key}!aes.\+h@{aes.\+h}}
+\subsubsection[{Add\+Round\+Key}]{\setlength{\rightskip}{0pt plus 5cm}void Add\+Round\+Key (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}, }
+\item[{const {\bf U\+Int32}}]{key\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a61178d048e1a9e5320290c764e6b25cd}
+
+
+Врши операцију еклузивне дисјункције блока бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} и кључа. 
+
+Добијени резултат се смешта у променљиву {\ttfamily state}. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица 4 $\ast$ 4 бајтова који се X\+O\+R-\/ује са кључем. \\
+\hline
+{\em key} & \mbox{[}in\mbox{]} Део кључа са којим се X\+O\+R-\/ује. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[4][4] = \{0\};
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} key[4] = \{0\};
+\hyperlink{aes_8c_a61178d048e1a9e5320290c764e6b25cd}{AddRoundKey}(state, key); \textcolor{comment}{// XOR-ује state са кључем чије су све вредности 0}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 16 датотеке aes.\+c.
+
+\hypertarget{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}{\index{aes.\+h@{aes.\+h}!C\+R\+C32@{C\+R\+C32}}
+\index{C\+R\+C32@{C\+R\+C32}!aes.\+h@{aes.\+h}}
+\subsubsection[{C\+R\+C32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32} C\+R\+C32 (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Int32}}]{crc, }
+\item[{const {\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}
+
+
+Враћа вредност C\+R\+C-\/а датог блока {\ttfamily state} од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} бајтова и {\ttfamily crc}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em crc} & \mbox{[}in\mbox{]} Вредност са којом се ради \hyperlink{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}{C\+R\+C32} \\
+\hline
+{\em state} & \mbox{[}in\mbox{]} Блок бајтова који се C\+R\+C-\/ује. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+Новодобијена вредност C\+R\+C функције након примене C\+R\+C-\/а на {\ttfamily crc} и {\ttfamily state} 
+\begin{DoxyCode}
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} crc = 0;
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}] = \{0\};
+crc = \hyperlink{aes_8c_afd7182b209f6bdecd24beaea1a6517aa}{CRC32}(crc, state); \textcolor{comment}{//        crc = 0xecbb4b55    }
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 611 датотеке aes.\+c.
+
+\hypertarget{aes_8h_ac8533f426828343402334bddbd5c2fd6}{\index{aes.\+h@{aes.\+h}!C\+R\+C\+Check@{C\+R\+C\+Check}}
+\index{C\+R\+C\+Check@{C\+R\+C\+Check}!aes.\+h@{aes.\+h}}
+\subsubsection[{C\+R\+C\+Check}]{\setlength{\rightskip}{0pt plus 5cm}int C\+R\+C\+Check (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{in, }
+\item[{const {\bf U\+Int32}}]{key\mbox{[}$\,$\mbox{]}, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_ac8533f426828343402334bddbd5c2fd6}
+
+
+Врши проверу \hyperlink{aes_8h_afd7182b209f6bdecd24beaea1a6517aa}{C\+R\+C32} функцијом, да ли је дошло до нежељених измена у шифрованој датотеци {\ttfamily in}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em in} & \mbox{[}in/out\mbox{]} Отворена улазна датотеке који је отворен за читање бинарних датоека код којег желимо да проверимо да ли је дошло до нежељених измена. Почетна позиција за читање мора бити на почетку датотке. \\
+\hline
+{\em key} & \mbox{[}in\mbox{]} Развијени облик кључа којим је шифрована датотека {\ttfamily in}. \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа којим је шифрована датотека {\ttfamily in}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+0 ако није дошло до нежељених измена у шифрованој датотеци {\ttfamily in}. ~\newline
+ 1 ако је дошло до нежељених измена у шифрованој датотеци {\ttfamily in}. 
+\begin{DoxyCode}
+FILE *in = fopen(\textcolor{stringliteral}{"ulaz.in.crypt"}, \textcolor{stringliteral}{"rb"});
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} keyIn[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+  \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} *key = NULL;
+  \hyperlink{aes_8c_a2b40a4093b74b3da1d8209ea3c140020}{KeyExpansion}(keyIn, &key, strlen(keyIn) * 8);
+  \textcolor{keywordflow}{if} (\hyperlink{aes_8c_ac8533f426828343402334bddbd5c2fd6}{CRCCheck}(in, key, strlen(keyIn) * 8) == 0)
+      printf(\textcolor{stringliteral}{"Dobro sifrovana"});
+  \textcolor{keywordflow}{else} printf(\textcolor{stringliteral}{"Lose"});
+  fclose(in);
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{Види}
+\hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion} 
+\end{DoxySeeAlso}
+
+
+Дефиниција у линији 623 датотеке aes.\+c.
+
+\hypertarget{aes_8h_aeef4c046e96aadbcf550393490956df5}{\index{aes.\+h@{aes.\+h}!Cypher\+A\+E\+S@{Cypher\+A\+E\+S}}
+\index{Cypher\+A\+E\+S@{Cypher\+A\+E\+S}!aes.\+h@{aes.\+h}}
+\subsubsection[{Cypher\+A\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}int Cypher\+A\+E\+S (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char} $\ast$$\ast$}]{in\+File\+Name, }
+\item[{const {\bf U\+Char}}]{key\+In\mbox{[}$\,$\mbox{]}, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_aeef4c046e96aadbcf550393490956df5}
+
+
+Шифрује датотеку са именом {\ttfamily $\ast$in\+File\+Name} помоћу кључа {\ttfamily key\+In}, величине {\ttfamily key\+Size}. 
+
+Име датотеке, {\ttfamily $\ast$in\+File\+Name} мора бити алоцирано на heap-\/у. Кључ {\ttfamily key\+In} којим се шифрује мора бити величине 128, 192 или 256 битова. Величина кључа се прослеђује у {\ttfamily key\+Size}. Име датотеке која се добија шифровањем се прослеђује у {\ttfamily $\ast$in\+File\+Name}. Датотека која се шифрује мора бити мања од {\ttfamily 4\+G\+B}. 
+\begin{DoxyParams}{Параметри}
+{\em in\+File\+Name} & \mbox{[}in/out\mbox{]} Име датотеке која се шифрује и име под којим је шифрована. \\
+\hline
+{\em key\+In} & \mbox{[}in\mbox{]} Кључ којим се шифрује датотека \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа којим се шифрује датотека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+0 aко је успешно шифрована датотека ~\newline
+ 1 aко је дошло до грешке при читању из датотеке (непостојећа датотека, грешке у систему).~\newline
+ 2 aко је дошло до грешке при писању у датотеку.~\newline
+ 3 aко нема довољно меморије. ~\newline
+ 4 ако дужина имена није добра (већа од максималне дозвољене у {\ttfamily W\+I\+N\+D\+O\+W\+S-\/у}). ~\newline
+ 5 ако дужина кључа није добра. ~\newline
+
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} *inputName, key[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+inputName = (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar}*)malloc(256);
+strcpy(inputName, \textcolor{stringliteral}{"ulaz.in"});
+\hyperlink{aes_8c_aeef4c046e96aadbcf550393490956df5}{CypherAES}(&inputName, key, strlen(key) * 8); \textcolor{comment}{// sifruje datoteku ulaz.in pomocu kljuca key}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Упозорење}
+Величина датотеке која се шифрује мора бити мања од {\ttfamily 4\+G\+B}. 
+\end{DoxyWarning}
+
+
+Дефиниција у линији 690 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a4f1ca53c57b6d7a4661e804b46e32556}{\index{aes.\+h@{aes.\+h}!Cypher\+File\+Name@{Cypher\+File\+Name}}
+\index{Cypher\+File\+Name@{Cypher\+File\+Name}!aes.\+h@{aes.\+h}}
+\subsubsection[{Cypher\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Char}$\ast$ Cypher\+File\+Name (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char} $\ast$}]{in\+File\+Name}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a4f1ca53c57b6d7a4661e804b46e32556}
+
+
+Прави име шифроване датотеке од имена датотеке који треба да шифрује 
+
+Додаје \hyperlink{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T} на крај имена шифроване датотеке {\ttfamily in\+File\+Name}. Ако је име датотеке које би се добило веће од максималне дужине имена датотеке коју {\ttfamily W\+I\+N\+D\+O\+W\+S} може да прими (\hyperlink{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N}), на крај имена додаје \hyperlink{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T} преко онолико карактера колико треба да се дода \hyperlink{aes_8h_ae4a1d7314e5a1620fe97baeab89a5102}{C\+R\+Y\+P\+T\+\_\+\+T\+E\+X\+T}, а да не пређе ограничење у {\ttfamily W\+I\+N\+D\+O\+W\+S}. 
+\begin{DoxyParams}{Параметри}
+{\em in\+File\+Name} & \mbox{[}in\mbox{]} Име улазне датотеке који се шифрује. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+{\ttfamily N\+U\+L\+L} ако нема довољно меморије. ~\newline
+ Иначe враћа име шифроване датотеке. 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} *t = \textcolor{stringliteral}{"tata"};
+t = \hyperlink{aes_8c_a4f1ca53c57b6d7a4661e804b46e32556}{CypherFileName}(t); \textcolor{comment}{// t postaje tata.crypt;}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 567 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a04fa82fc5866faa97b820e9f610ac8a8}{\index{aes.\+h@{aes.\+h}!Decrypt\+State@{Decrypt\+State}}
+\index{Decrypt\+State@{Decrypt\+State}!aes.\+h@{aes.\+h}}
+\subsubsection[{Decrypt\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Decrypt\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf U\+Char}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{const {\bf U\+Int32}}]{key\mbox{[}$\,$\mbox{]}, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a04fa82fc5866faa97b820e9f610ac8a8}
+
+
+Дешифрује АЕС-\/ом низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} задат са {\ttfamily in} помоћу низа кључева {\ttfamily key} (добијених \hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion}) и уписује у {\ttfamily out}. 
+
+{\ttfamily in} Мора бити величине бар \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}, {\ttfamily out} мора имати алоцирану меморију изван функције. 
+\begin{DoxyParams}{Параметри}
+{\em in} & \mbox{[}in\mbox{]} Низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} који се дешифрује АЕС-\/ом. \\
+\hline
+{\em out} & \mbox{[}out\mbox{]} Низ дешифрованих бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} \\
+\hline
+{\em key} & \mbox{[}in\mbox{]} Низ експандованих кључева. \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа којим се дешифрује. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} out[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}], in[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}] = \{0\},
+keyIn[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} *key;
+\hyperlink{aes_8c_a2b40a4093b74b3da1d8209ea3c140020}{KeyExpansion}(keyIn, &key, 128);
+\hyperlink{aes_8c_a04fa82fc5866faa97b820e9f610ac8a8}{DecryptState}(in, out, key, 128); \textcolor{comment}{// out је низ дешифрованих бајтова in кључем key.}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Упозорење}
+Простор од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} за {\ttfamily out} мора бити алоциран изван функције. 
+\end{DoxyWarning}
+
+
+Дефиниција у линији 440 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a53000b729ca739f488c255eec26a83aa}{\index{aes.\+h@{aes.\+h}!Decypher\+A\+E\+S@{Decypher\+A\+E\+S}}
+\index{Decypher\+A\+E\+S@{Decypher\+A\+E\+S}!aes.\+h@{aes.\+h}}
+\subsubsection[{Decypher\+A\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}int Decypher\+A\+E\+S (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char} $\ast$$\ast$}]{in\+File\+Name, }
+\item[{const {\bf U\+Char}}]{key\+In\mbox{[}$\,$\mbox{]}, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a53000b729ca739f488c255eec26a83aa}
+
+
+Дешифрује датотеку са именом {\ttfamily $\ast$in\+File\+Name} помоћу кључа {\ttfamily key\+In}, величине {\ttfamily key\+Size}. 
+
+Име датотеке, {\ttfamily $\ast$in\+File\+Name} мора бити алоцирано на heap-\/у. Кључ {\ttfamily key\+In} којим се дешифрује мора бити величине 128, 192 или 256 битова. Величина кључа се прослеђује у {\ttfamily key\+Size}. Име датотеке која се добија дешифровањем се прослеђује у {\ttfamily $\ast$in\+File\+Name}. Датотека која се дешифрује мора бити мања од {\ttfamily 4\+G\+B} (не укључујући заглавље). 
+\begin{DoxyParams}{Параметри}
+{\em in\+File\+Name} & \mbox{[}in/out\mbox{]} Име датотеке која се дешифрује и име под којим је дешифрована. \\
+\hline
+{\em key\+In} & \mbox{[}in\mbox{]} Кључ којим се дешифрује датотека \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа којим се дешифрује датотека. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+0 aко је успешно дешифрована датотека ~\newline
+ 1 aко је дошло до грешке при читању из датотеке (непостојећа датотека, грешке у систему).~\newline
+ 2 aко је дошло до грешке при писању у датотеку.~\newline
+ 3 aко нема довољно меморије. ~\newline
+ 4 ако дужина имена није добра (већа од максималне дозвољене у {\ttfamily W\+I\+N\+D\+O\+W\+S-\/у}). ~\newline
+ 5 ако дужина кључа није добра. ~\newline
+ 6 ако није добро шифрована датотека уз помоћ кључа {\ttfamily key\+In} 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} *inputName, key[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+ inputName = (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar}*)malloc(256);
+ strcpy(inputName, \textcolor{stringliteral}{"ulaz.in.crypt"});
+ \hyperlink{aes_8c_a53000b729ca739f488c255eec26a83aa}{DecypherAES}(&inputName, key, strlen(key) * 8); \textcolor{comment}{// datoteka ulaz.in.crypt se desifruje pomocu
+       kljuca key}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Упозорење}
+Величина датотеке која се шифрује мора бити мања од {\ttfamily 4\+G\+B} (искључујући заглавља). 
+\end{DoxyWarning}
+
+
+Дефиниција у линији 783 датотеке aes.\+c.
+
+\hypertarget{aes_8h_af5e8e76552be6bdf6fc268e941e7d689}{\index{aes.\+h@{aes.\+h}!De\+Cypher\+File\+Name@{De\+Cypher\+File\+Name}}
+\index{De\+Cypher\+File\+Name@{De\+Cypher\+File\+Name}!aes.\+h@{aes.\+h}}
+\subsubsection[{De\+Cypher\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}int De\+Cypher\+File\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char} $\ast$$\ast$}]{in\+File\+Name}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_af5e8e76552be6bdf6fc268e941e7d689}
+
+
+Враћа име датотеке које ће имати након што се дешифрује. 
+
+Проверава да ли постоји датотека са истим именом као {\ttfamily $\ast$in\+File\+Name}. Ако постоји додаје насумичан број на почетак док дато име не буде постојало. Кад дужина имена са додатим насумичним бројем пређе дужину \hyperlink{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N} додаје се број тако да се крај имена губи. {\ttfamily $\ast$in\+File\+Name} мора бити алоциран динамички. 
+\begin{DoxyParams}{Параметри}
+{\em in\+File\+Name} & \mbox{[}in/out\mbox{]} Име датотеке који се дешифрује. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+{\ttfamily 0} aко је све добро протекло.~\newline
+ {\ttfamily 1} aко нема довољно меморије. ~\newline
+ {\ttfamily 2} ако је првобитно прослеђено име веће од \hyperlink{aes_8h_a3fd5ab5d380936ded4f6cbe6fe24dca8}{M\+A\+X\+\_\+\+F\+I\+L\+E\+\_\+\+L\+E\+N} 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} *t = (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar}*)malloc(5);
+t[0] = \textcolor{charliteral}{'\(\backslash\)0'};
+strcat(t, \textcolor{stringliteral}{"tata"});
+\hyperlink{aes_8c_af5e8e76552be6bdf6fc268e941e7d689}{DeCypherFileName}(&t); 
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 585 датотеке aes.\+c.
+
+\hypertarget{aes_8h_ad7bd04e37ce32485ba137a85d8af1967}{\index{aes.\+h@{aes.\+h}!Encrypt\+State@{Encrypt\+State}}
+\index{Encrypt\+State@{Encrypt\+State}!aes.\+h@{aes.\+h}}
+\subsubsection[{Encrypt\+State}]{\setlength{\rightskip}{0pt plus 5cm}void Encrypt\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char}}]{in\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf U\+Char}}]{out\mbox{[}$\,$\mbox{]}, }
+\item[{const {\bf U\+Int32}}]{key\mbox{[}$\,$\mbox{]}, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_ad7bd04e37ce32485ba137a85d8af1967}
+
+
+Шифрује АЕС-\/ом низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} задат са {\ttfamily in} помоћу низа кључева {\ttfamily key} (добијених \hyperlink{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{Key\+Expansion}) и уписује у {\ttfamily out}. 
+
+{\ttfamily in} Мора бити величине бар \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}, {\ttfamily out} мора имати алоцирану меморију изван функције. 
+\begin{DoxyParams}{Параметри}
+{\em in} & \mbox{[}in\mbox{]} Низ бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} који се шифрује АЕС-\/ом. \\
+\hline
+{\em out} & \mbox{[}out\mbox{]} Низ шифрованих бајтова величине \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} \\
+\hline
+{\em key} & \mbox{[}in\mbox{]} Низ експандованих кључева. \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа којим се шифрује. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} out[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}], in[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}] = \{0\},
+keyIn[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} *key;
+\hyperlink{aes_8c_a2b40a4093b74b3da1d8209ea3c140020}{KeyExpansion}(keyIn, &key, 128);
+\hyperlink{aes_8c_ad7bd04e37ce32485ba137a85d8af1967}{EncryptState}(in, out, key, 128); \textcolor{comment}{// out је низ шифрованих бајтова in кључем key.}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Упозорење}
+Простор од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} за {\ttfamily out} мора бити алоциран изван функције. 
+\end{DoxyWarning}
+
+
+Дефиниција у линији 373 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a663692ae0b5723e1f91a93fdd5e07f8e}{\index{aes.\+h@{aes.\+h}!Inv\+Mix\+Columns@{Inv\+Mix\+Columns}}
+\index{Inv\+Mix\+Columns@{Inv\+Mix\+Columns}!aes.\+h@{aes.\+h}}
+\subsubsection[{Inv\+Mix\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}void Inv\+Mix\+Columns (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a663692ae0b5723e1f91a93fdd5e07f8e}
+
+
+Инверзно миксује колоне матрице бајтова {\ttfamily state}. 
+
+Инверзно миксовање се врши множењем са одговарајућом матрицом у Галоаовом пољу. Крајњи резултат је матрица која је првобитно била миксована. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица бајтова у којој се вршим миксовање колона. 
+\begin{DoxyCode}
+ \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[4][4] = \{ \{ 2 \}, \{ 7 \}, \{ 0 \}, \{ 5 \} \};
+\hyperlink{aes_8c_a663692ae0b5723e1f91a93fdd5e07f8e}{InvMixColumns}(state); \textcolor{comment}{// state = \{\{0\}, \{1\}, \{2\}, \{3\}\}, матрица која се добија миксовањем
+       колона.}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 234 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a0691b569c9d38deff434ba3b259916f1}{\index{aes.\+h@{aes.\+h}!Inv\+Shift\+Rows@{Inv\+Shift\+Rows}}
+\index{Inv\+Shift\+Rows@{Inv\+Shift\+Rows}!aes.\+h@{aes.\+h}}
+\subsubsection[{Inv\+Shift\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}void Inv\+Shift\+Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a0691b569c9d38deff434ba3b259916f1}
+
+
+Ротира бајтове у врстама, у i-\/тој врсти за i места удесно. 
+
+Матрица бајтова {\ttfamily state} 4 $\ast$ 4 трансформише се у нову тако да се свака i-\/та врста ротира удесно i места. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица бајтова у којој се бајтови по врстама ротирају. 
+\begin{DoxyCode}
+ Uchar state[4][4] = \{\{0\}, \{1\}, \{2\}, \{3\}\}
+\hyperlink{aes_8c_ab2370c8f7e2864610060a618e32e0a39}{ShiftRows}(state); \textcolor{comment}{// state[4][4] = \{\{0\}, \{0, 1, 0, 0\}, \{0, 0, 2, 0\}, \{0, 0, 0, 3\}\}}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 120 датотеке aes.\+c.
+
+\hypertarget{aes_8h_aa116f5c396e0ac94147ee711e24906af}{\index{aes.\+h@{aes.\+h}!Inv\+Sub\+Bytes@{Inv\+Sub\+Bytes}}
+\index{Inv\+Sub\+Bytes@{Inv\+Sub\+Bytes}!aes.\+h@{aes.\+h}}
+\subsubsection[{Inv\+Sub\+Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void Inv\+Sub\+Bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_aa116f5c396e0ac94147ee711e24906af}
+
+
+Мења вредност сваког појединачног бајта из {\ttfamily state} одговарајућом вредношћу из \hyperlink{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}{I\+N\+V\+S\+\_\+\+B\+O\+X}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица 4 $\ast$4 бајтова над чијим вредностима се врши замена. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[4][4] = \{0\};
+\hyperlink{aes_8c_a77529d2c93011d18f738a210783f3362}{SubBytes}(state); Замењује сваки бајт из state са одговарајућом вредношћу из 
+      \hyperlink{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}{INVS\_BOX}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 78 датотеке aes.\+c.
+
+\hypertarget{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}{\index{aes.\+h@{aes.\+h}!Key\+Expansion@{Key\+Expansion}}
+\index{Key\+Expansion@{Key\+Expansion}!aes.\+h@{aes.\+h}}
+\subsubsection[{Key\+Expansion}]{\setlength{\rightskip}{0pt plus 5cm}int Key\+Expansion (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char}}]{key\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf U\+Int32} $\ast$$\ast$}]{w, }
+\item[{const int}]{key\+Size}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_aaad97a014c1d5710dc99f1449d41cac1}
+
+
+Развија кључ {\ttfamily key} у низ 4-\/бајтних кључева {\ttfamily w}. 
+
+Добијених 4-\/бајтних кључева има колико и (рунди шифорвања + 1) $\ast$ 4. Рунди шифровања има у зависности од величине кључа. Фунцкија враћа вредност int која указује на тип грешке (ако га има). 
+\begin{DoxyParams}{Параметри}
+{\em key} & \mbox{[}in\mbox{]} Кључ који се развија. \\
+\hline
+{\em key\+Size} & \mbox{[}in\mbox{]} Величина кључа који се развија. \\
+\hline
+{\em w} & \mbox{[}out\mbox{]} Показивач на низ експандованих кључева од кључа {\ttfamily key} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+{\ttfamily -\/1} ако нема довољно меморије за експанзију кључа. ~\newline
+{\ttfamily 1} aко је прослеђена лоша дужина кључа.~\newline
+{\ttfamily 0} aко је све протекло у реду. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} keyIn[] = \textcolor{stringliteral}{"\(\backslash\)x2b\(\backslash\)x7e\(\backslash\)x15\(\backslash\)x16\(\backslash\)x28\(\backslash\)xae\(\backslash\)xd2\(\backslash\)xa6\(\backslash\)xab\(\backslash\)xf7\(\backslash\)x15\(\backslash\)x88\(\backslash\)x09\(\backslash\)xcf\(\backslash\)x4f\(\backslash\)x3c"};
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} *key;
+\hyperlink{aes_8c_a2b40a4093b74b3da1d8209ea3c140020}{KeyExpansion}(keyIn, &key, 128); \textcolor{comment}{// Развија 128-битни keyIn кључ keyIn.}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 340 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a390e2fa9bdb33429b8d8804a0cb53ce8}{\index{aes.\+h@{aes.\+h}!Mix\+Columns@{Mix\+Columns}}
+\index{Mix\+Columns@{Mix\+Columns}!aes.\+h@{aes.\+h}}
+\subsubsection[{Mix\+Columns}]{\setlength{\rightskip}{0pt plus 5cm}void Mix\+Columns (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a390e2fa9bdb33429b8d8804a0cb53ce8}
+
+
+Миксује колоне матрице бајтова {\ttfamily state}. 
+
+Миксовање се врши множењем са одговарајућом матрицом у Галоаовом пољу. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица бајтова у којој се вршим миксовање колона. 
+\begin{DoxyCode}
+ Uchar state[4][4] = \{\{0\}, \{1\}, \{2\}, \{3\}\};
+\hyperlink{aes_8c_a390e2fa9bdb33429b8d8804a0cb53ce8}{MixColumns}(state); \textcolor{comment}{// state = \{\{2\}, \{7\}, \{0\}, \{5\}\}, матрица која се добија миксовањем колона.}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 143 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a43ffbb16820017200bc8c9ccfc867db9}{\index{aes.\+h@{aes.\+h}!Read\+Data@{Read\+Data}}
+\index{Read\+Data@{Read\+Data}!aes.\+h@{aes.\+h}}
+\subsubsection[{Read\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Read\+Data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}, }
+\item[{{\bf U\+Int32} $\ast$}]{size\+To\+End}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a43ffbb16820017200bc8c9ccfc867db9}
+
+
+Чита из датотеке {\ttfamily f} блок бајтова \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} и смешта у {\ttfamily state}. 
+
+Ако је број преосталих бајтова до краја датотеке ({\ttfamily size\+To\+End}) мањи од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}, прочитаће само толико бајтова и уписати их у {\ttfamily state}. Остатак се попуњава нулама. {\ttfamily size\+To\+End} је показивач на величину бајтова колико се чита. Његов број смањује се за \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} или ако је мањи од \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} поставља се на {\ttfamily 0}. Низ {\ttfamily state} мора имати бар 16 бајтова меморије. 
+\begin{DoxyParams}{Параметри}
+{\em f} & \mbox{[}in/out\mbox{]} Показивач на датотеку из које се бајтови читају. \\
+\hline
+{\em state} & \mbox{[}out\mbox{]} Низ бајтова (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char}) у који се смештају прочитани бајтови. \\
+\hline
+{\em size\+To\+End} & \mbox{[}in/out\mbox{]} Величина којом се одређује колико се бајтова чита (и чија вредност се умањује за број прочитаних бајтова). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+{\ttfamily 1} aко је све добро протекло.~\newline
+ {\ttfamily 0} ако је дошло до грешке при читању датотеке. 
+\begin{DoxyCode}
+FILE *in = fopen(\textcolor{stringliteral}{"Ulaz.in"}, \textcolor{stringliteral}{"r"});
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}];
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} sizeToEnd = 10;
+\textcolor{keywordflow}{if} (!\hyperlink{aes_8c_a43ffbb16820017200bc8c9ccfc867db9}{ReadData}(in, state, &sizeToEnd)) 
+printf(\textcolor{stringliteral}{"Greska pri citanju\(\backslash\)n"});
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 523 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a8a54c67c2e95fd6481a810f0d8ba8099}{\index{aes.\+h@{aes.\+h}!Rot\+Word@{Rot\+Word}}
+\index{Rot\+Word@{Rot\+Word}!aes.\+h@{aes.\+h}}
+\subsubsection[{Rot\+Word}]{\setlength{\rightskip}{0pt plus 5cm}void Rot\+Word (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Int32} $\ast$}]{word\+Pt}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a8a54c67c2e95fd6481a810f0d8ba8099}
+
+
+1-\/бајтна кружна ротација 4-\/бајтне(\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}) речи улево. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em word\+Pt} & \mbox{[}in/out\mbox{]} Показивач на \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} реч која се ротира. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} t= 0x01;
+RotWor(&t); \textcolor{comment}{// t = 0x0100;}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 322 датотеке aes.\+c.
+
+\hypertarget{aes_8h_ab2370c8f7e2864610060a618e32e0a39}{\index{aes.\+h@{aes.\+h}!Shift\+Rows@{Shift\+Rows}}
+\index{Shift\+Rows@{Shift\+Rows}!aes.\+h@{aes.\+h}}
+\subsubsection[{Shift\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}void Shift\+Rows (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_ab2370c8f7e2864610060a618e32e0a39}
+
+
+Ротира бајтове у врстама, у i-\/тој врсти за i места улево. 
+
+Матрица бајтова {\ttfamily state} 4 $\ast$ 4 трансформише се у нову тако да се свака i-\/та врста ротира улево i места. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица бајтова у којој се бајтови по врстама ротирају. 
+\begin{DoxyCode}
+ Uchar state[4][4] = \{\{0\}, \{1\}, \{2\}, \{3\}\}
+\hyperlink{aes_8c_ab2370c8f7e2864610060a618e32e0a39}{ShiftRows}(state); \textcolor{comment}{// state[4][4] = \{\{0\}, \{0, 0, 0, 1\}, \{0, 0, 2, 0\}, \{0, 3, 0, 0\}\}}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 97 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a18cf3834d6b4ccee85ac6a39617e0582}{\index{aes.\+h@{aes.\+h}!Size\+Of\+File@{Size\+Of\+File}}
+\index{Size\+Of\+File@{Size\+Of\+File}!aes.\+h@{aes.\+h}}
+\subsubsection[{Size\+Of\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32} Size\+Of\+File (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char} $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a18cf3834d6b4ccee85ac6a39617e0582}
+
+
+Враћа величину датотеке имена {\ttfamily name} која се налази у истом фолдеру у којем је програм. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em name} & \mbox{[}in\mbox{]} Име датотеке чија се величина тражи. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+Величина датотеке у бајтовима. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} *name = \textcolor{stringliteral}{"Ulaz.in"};
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} size = \hyperlink{aes_8c_a18cf3834d6b4ccee85ac6a39617e0582}{SizeOfFile}(name); \textcolor{comment}{// vraca velicinu datoteke sa imenom name}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Упозорење}
+Величина датотеке не сме бити већа од 4\+G\+B. Ако дође до грешке при читању датотеке, непознат је резултат. 
+\end{DoxyWarning}
+
+
+Дефиниција у линији 505 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a521be23a2bb2cc37ba145760644baf49}{\index{aes.\+h@{aes.\+h}!State\+To\+U\+Int32@{State\+To\+U\+Int32}}
+\index{State\+To\+U\+Int32@{State\+To\+U\+Int32}!aes.\+h@{aes.\+h}}
+\subsubsection[{State\+To\+U\+Int32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32} State\+To\+U\+Int32 (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a521be23a2bb2cc37ba145760644baf49}
+
+
+Преводи низ од 16 бајтова у број од 4 бајта (\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}). 
+
+Бајтови са нижим индексима у низу иду у више бајтове броја (они који имају већу тежину у броју). Најнижи бајт броја је у {\ttfamily state}\mbox{[}\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}-\/1\mbox{]}. Највиши бајт броја је у {\ttfamily state}\mbox{[}\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}-\/4\mbox{]}. 
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Низ бајтова у који се пребацује број. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+4-\/бајтни број који се добија из {\ttfamily state}. 
+\begin{DoxyCode}
+ \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} t;
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}] = \{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1\};
+t = \hyperlink{aes_8c_a521be23a2bb2cc37ba145760644baf49}{StateToUInt32}(state) \textcolor{comment}{// t = 1}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+\begin{DoxyNote}{Напомена}
+Функција је неопходна јер се не зна да ли рачунар на ком се покреће програм има L\+I\+T\+T\+L\+E-\/\+E\+N\+D\+I\+A\+N или B\+I\+G-\/\+E\+N\+D\+I\+A\+N. 
+\end{DoxyNote}
+
+
+Дефиниција у линији 556 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a77529d2c93011d18f738a210783f3362}{\index{aes.\+h@{aes.\+h}!Sub\+Bytes@{Sub\+Bytes}}
+\index{Sub\+Bytes@{Sub\+Bytes}!aes.\+h@{aes.\+h}}
+\subsubsection[{Sub\+Bytes}]{\setlength{\rightskip}{0pt plus 5cm}void Sub\+Bytes (
+\begin{DoxyParamCaption}
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a77529d2c93011d18f738a210783f3362}
+
+
+Мења вредност сваког појединачног бајта из {\ttfamily state} одговарајућом вредношћу из \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\+\_\+\+B\+O\+X}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em state} & \mbox{[}in/out\mbox{]} Матрица 4 $\ast$4 бајтова над чијим вредностима се врши замена. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[4][4] = \{0\};
+\hyperlink{aes_8c_a77529d2c93011d18f738a210783f3362}{SubBytes}(state); Замењује сваки бајт из state са одговарајућом вредношћу из 
+      \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\_BOX}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Дефиниција у линији 59 датотеке aes.\+c.
+
+\hypertarget{aes_8h_ae42b375b0183763e33ef62fb03c41f4d}{\index{aes.\+h@{aes.\+h}!Sub\+Word@{Sub\+Word}}
+\index{Sub\+Word@{Sub\+Word}!aes.\+h@{aes.\+h}}
+\subsubsection[{Sub\+Word}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32} Sub\+Word (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Int32}}]{word}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_ae42b375b0183763e33ef62fb03c41f4d}
+
+
+Замена сваког бајта 4-\/бајтне речи {\ttfamily word} одговарајућим бајтом из \hyperlink{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{S\+\_\+\+B\+O\+X}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em word} & \mbox{[}in\mbox{]} 4-\/бајтна реч типа \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} код које се мењају бајтови. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+4-\/бајтна реч која се добија заменом бајтова из {\ttfamily word} 
+\begin{DoxyCode}
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} t = 0x1;
+t = \hyperlink{aes_8c_ae42b375b0183763e33ef62fb03c41f4d}{SubWord}(t); \textcolor{comment}{// t = 0x6363637c }
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 326 датотеке aes.\+c.
+
+\hypertarget{aes_8h_a8b5f3e5be9ef9141f608ea5f455c9045}{\index{aes.\+h@{aes.\+h}!U\+Char\+To\+U\+Int32@{U\+Char\+To\+U\+Int32}}
+\index{U\+Char\+To\+U\+Int32@{U\+Char\+To\+U\+Int32}!aes.\+h@{aes.\+h}}
+\subsubsection[{U\+Char\+To\+U\+Int32}]{\setlength{\rightskip}{0pt plus 5cm}{\bf U\+Int32} U\+Char\+To\+U\+Int32 (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Char}}]{byte\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_a8b5f3e5be9ef9141f608ea5f455c9045}
+
+
+Претвара низ 4 бајта у \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em byte} & \mbox{[}in\mbox{]} Низ 4 бајта (тип \hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+Враћа број типа \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} чија је представа {\ttfamily byte} 
+\begin{DoxyCode}
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} byte[4] = \{\(\backslash\)x0, \(\backslash\)x1, \(\backslash\)x2, \(\backslash\)x3\}
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} t = UCharToUint32(byte); \textcolor{comment}{// t добија вредност 0x0123}
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 7 датотеке aes.\+c.
+
+\hypertarget{aes_8h_abf754619bec46c9248838027681ac7c0}{\index{aes.\+h@{aes.\+h}!U\+Int32\+To\+State@{U\+Int32\+To\+State}}
+\index{U\+Int32\+To\+State@{U\+Int32\+To\+State}!aes.\+h@{aes.\+h}}
+\subsubsection[{U\+Int32\+To\+State}]{\setlength{\rightskip}{0pt plus 5cm}void U\+Int32\+To\+State (
+\begin{DoxyParamCaption}
+\item[{const {\bf U\+Int32}}]{num, }
+\item[{{\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_abf754619bec46c9248838027681ac7c0}
+
+
+Преводи 4-\/бајтни број типа \hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{U\+Int32} у низ од 16 бајтова. 
+
+Виши бајтови броја (они који имају већу тежину у броју) иду на ниже индексе у низу. Остали бајтови се попуњавају са нулама. Низ мора имати меморију од бар \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} бајтова. Најнижи бајт броја се ставља у {\ttfamily state}\mbox{[}\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E}-\/1\mbox{]} 
+\begin{DoxyParams}{Параметри}
+{\em num} & \mbox{[}in\mbox{]} Број који пребацујемо у низ бајтова. \\
+\hline
+{\em state} & \mbox{[}in/out\mbox{]} Низ бајтова у који се пребацује број. 
+\begin{DoxyCode}
+\hyperlink{aes_8h_ab6132671e695a54d5c39ed9ce1536087}{UInt32} t = 1;
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}];
+\hyperlink{aes_8c_abf754619bec46c9248838027681ac7c0}{UInt32ToState}(t, state); \textcolor{comment}{// poslednji bajt state je 1, svi ostali su 0}
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Напомена}
+Функција је неопходна јер се не зна да ли рачунар на ком се покреће програм има L\+I\+T\+T\+L\+E-\/\+E\+N\+D\+I\+A\+N или B\+I\+G-\/\+E\+N\+D\+I\+A\+N. 
+\end{DoxyNote}
+
+
+Дефиниција у линији 548 датотеке aes.\+c.
+
+\hypertarget{aes_8h_af85d6c7d108f3d11a373b45e4d17907c}{\index{aes.\+h@{aes.\+h}!Write\+Data@{Write\+Data}}
+\index{Write\+Data@{Write\+Data}!aes.\+h@{aes.\+h}}
+\subsubsection[{Write\+Data}]{\setlength{\rightskip}{0pt plus 5cm}int Write\+Data (
+\begin{DoxyParamCaption}
+\item[{F\+I\+L\+E $\ast$}]{f, }
+\item[{const {\bf U\+Char}}]{state\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{aes_8h_af85d6c7d108f3d11a373b45e4d17907c}
+
+
+Пише у датотеку {\ttfamily f} блок бајтова \hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{S\+T\+A\+T\+E\+\_\+\+S\+I\+Z\+E} из {\ttfamily state}. 
+
+
+\begin{DoxyParams}{Параметри}
+{\em f} & \mbox{[}in/out\mbox{]} Показивач на датотеку у који се бајтови пишу. \\
+\hline
+{\em state} & \mbox{[}in\mbox{]} Низ бајтова (\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{U\+Char}) који се уписују. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Враћа}
+{\ttfamily 1} aко је све добро протекло.~\newline
+ {\ttfamily 0} ако је дошло до грешке при писању датотеке. 
+\begin{DoxyCode}
+FILE *out = fopen(\textcolor{stringliteral}{"Izlaz.out"}, \textcolor{stringliteral}{"w"});
+\hyperlink{aes_8h_a36fec739165651cfd8d4d9306f2a3996}{UChar} state[\hyperlink{aes_8h_a7e3ce397037c8f4f14f7adc0b969b662}{STATE\_SIZE}] = \{0\};  
+\textcolor{keywordflow}{if} (!\hyperlink{aes_8c_af85d6c7d108f3d11a373b45e4d17907c}{WriteData}(out, state)) \textcolor{comment}{// pise u datoteku Izlaz.out STATE\_SIZE bajtova ciji su svi bitovi 0}
+printf(\textcolor{stringliteral}{"Greska pri pisanju\(\backslash\)n"});
+\end{DoxyCode}
+ 
+\end{DoxyReturn}
+
+
+Дефиниција у линији 541 датотеке aes.\+c.
+
+
+
+\subsection{Документација променљиве}
+\hypertarget{aes_8h_a62cd387485ff345a0a513f5aae69ad15}{\index{aes.\+h@{aes.\+h}!C\+R\+C32\+\_\+\+T\+A\+B\+L\+E@{C\+R\+C32\+\_\+\+T\+A\+B\+L\+E}}
+\index{C\+R\+C32\+\_\+\+T\+A\+B\+L\+E@{C\+R\+C32\+\_\+\+T\+A\+B\+L\+E}!aes.\+h@{aes.\+h}}
+\subsubsection[{C\+R\+C32\+\_\+\+T\+A\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+Int32} C\+R\+C32\+\_\+\+T\+A\+B\+L\+E\mbox{[}$\,$\mbox{]}}}\label{aes_8h_a62cd387485ff345a0a513f5aae69ad15}
+Прерачунате вредности које се користе код провере исправности шифрованог датотеке датим кључем. 
+
+Дефиниција у линији 195 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a6ab4b1b208628e5676af84b4757dd65f}{\index{aes.\+h@{aes.\+h}!G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L@{G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L}}
+\index{G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L@{G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L}!aes.\+h@{aes.\+h}}
+\subsubsection[{G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+Char} G\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+U\+L\mbox{[}256\mbox{]}\mbox{[}6\mbox{]}}}\label{aes_8h_a6ab4b1b208628e5676af84b4757dd65f}
+Прерачунате вредности множења са 2, 3, А, B, C, D у Галоаовом пољу. 
+
+Дефиниција у линији 58 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}{\index{aes.\+h@{aes.\+h}!I\+N\+V\+S\+\_\+\+B\+O\+X@{I\+N\+V\+S\+\_\+\+B\+O\+X}}
+\index{I\+N\+V\+S\+\_\+\+B\+O\+X@{I\+N\+V\+S\+\_\+\+B\+O\+X}!aes.\+h@{aes.\+h}}
+\subsubsection[{I\+N\+V\+S\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+Char} I\+N\+V\+S\+\_\+\+B\+O\+X\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}}}\label{aes_8h_a5348a978c0b39a51ac447b3431bcbe01}
+{\bfseries Почетна вредност\+:}
+\begin{DoxyCode}
+= \{
+    0x52, 0x09, 0x6A, 0xD5, 0x30, 0x36, 0xA5, 0x38, 0xBF, 0x40, 0xA3, 0x9E, 0x81, 0xF3, 0xD7, 0xFB,
+    0x7C, 0xE3, 0x39, 0x82, 0x9B, 0x2F, 0xFF, 0x87, 0x34, 0x8E, 0x43, 0x44, 0xC4, 0xDE, 0xE9, 0xCB,
+    0x54, 0x7B, 0x94, 0x32, 0xA6, 0xC2, 0x23, 0x3D, 0xEE, 0x4C, 0x95, 0x0B, 0x42, 0xFA, 0xC3, 0x4E,
+    0x08, 0x2E, 0xA1, 0x66, 0x28, 0xD9, 0x24, 0xB2, 0x76, 0x5B, 0xA2, 0x49, 0x6D, 0x8B, 0xD1, 0x25,
+    0x72, 0xF8, 0xF6, 0x64, 0x86, 0x68, 0x98, 0x16, 0xD4, 0xA4, 0x5C, 0xCC, 0x5D, 0x65, 0xB6, 0x92,
+    0x6C, 0x70, 0x48, 0x50, 0xFD, 0xED, 0xB9, 0xDA, 0x5E, 0x15, 0x46, 0x57, 0xA7, 0x8D, 0x9D, 0x84,
+    0x90, 0xD8, 0xAB, 0x00, 0x8C, 0xBC, 0xD3, 0x0A, 0xF7, 0xE4, 0x58, 0x05, 0xB8, 0xB3, 0x45, 0x06,
+    0xD0, 0x2C, 0x1E, 0x8F, 0xCA, 0x3F, 0x0F, 0x02, 0xC1, 0xAF, 0xBD, 0x03, 0x01, 0x13, 0x8A, 0x6B,
+    0x3A, 0x91, 0x11, 0x41, 0x4F, 0x67, 0xDC, 0xEA, 0x97, 0xF2, 0xCF, 0xCE, 0xF0, 0xB4, 0xE6, 0x73,
+    0x96, 0xAC, 0x74, 0x22, 0xE7, 0xAD, 0x35, 0x85, 0xE2, 0xF9, 0x37, 0xE8, 0x1C, 0x75, 0xDF, 0x6E,
+    0x47, 0xF1, 0x1A, 0x71, 0x1D, 0x29, 0xC5, 0x89, 0x6F, 0xB7, 0x62, 0x0E, 0xAA, 0x18, 0xBE, 0x1B,
+    0xFC, 0x56, 0x3E, 0x4B, 0xC6, 0xD2, 0x79, 0x20, 0x9A, 0xDB, 0xC0, 0xFE, 0x78, 0xCD, 0x5A, 0xF4,
+    0x1F, 0xDD, 0xA8, 0x33, 0x88, 0x07, 0xC7, 0x31, 0xB1, 0x12, 0x10, 0x59, 0x27, 0x80, 0xEC, 0x5F,
+    0x60, 0x51, 0x7F, 0xA9, 0x19, 0xB5, 0x4A, 0x0D, 0x2D, 0xE5, 0x7A, 0x9F, 0x93, 0xC9, 0x9C, 0xEF,
+    0xA0, 0xE0, 0x3B, 0x4D, 0xAE, 0x2A, 0xF5, 0xB0, 0xC8, 0xEB, 0xBB, 0x3C, 0x83, 0x53, 0x99, 0x61,
+    0x17, 0x2B, 0x04, 0x7E, 0xBA, 0x77, 0xD6, 0x26, 0xE1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0C, 0x7D
+\}
+\end{DoxyCode}
+Прерачунате вредности које користи функција Inv\+Sub\+Byte 
+
+Дефиниција у линији 38 датотеке aes.\+h.
+
+\hypertarget{aes_8h_a4912edcacf7773d419635694252d800b}{\index{aes.\+h@{aes.\+h}!R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T@{R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T}}
+\index{R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T@{R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T}!aes.\+h@{aes.\+h}}
+\subsubsection[{R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+Int32} R\+O\+U\+N\+D\+\_\+\+C\+O\+N\+S\+T\+A\+N\+T\mbox{[}$\,$\mbox{]}}}\label{aes_8h_a4912edcacf7773d419635694252d800b}
+{\bfseries Почетна вредност\+:}
+\begin{DoxyCode}
+= \{ 0x01000000, 0x02000000, 0x04000000, 0x08000000, 0x10000000, 0x20000000,
+0x40000000, 0x80000000, 0x1b000000, 0x36000000, 0x6c000000, 0xd8000000,
+0xab000000, 0x4d000000, 0x9a000000 \}
+\end{DoxyCode}
+Константа која осигурава сигурност експанзије кључа 
+
+Дефиниција у линији 190 датотеке aes.\+h.
+
+\hypertarget{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}{\index{aes.\+h@{aes.\+h}!S\+\_\+\+B\+O\+X@{S\+\_\+\+B\+O\+X}}
+\index{S\+\_\+\+B\+O\+X@{S\+\_\+\+B\+O\+X}!aes.\+h@{aes.\+h}}
+\subsubsection[{S\+\_\+\+B\+O\+X}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf U\+Char} S\+\_\+\+B\+O\+X\mbox{[}16\mbox{]}\mbox{[}16\mbox{]}}}\label{aes_8h_ae29b256e67f01d55ad6c76a87e0a56ca}
+{\bfseries Почетна вредност\+:}
+\begin{DoxyCode}
+= \{
+    0x63, 0x7C, 0x77, 0x7B, 0xF2, 0x6B, 0x6F, 0xC5, 0x30, 0x01, 0x67, 0x2B, 0xFE, 0xD7, 0xAB, 0x76,
+    0xCA, 0x82, 0xC9, 0x7D, 0xFA, 0x59, 0x47, 0xF0, 0xAD, 0xD4, 0xA2, 0xAF, 0x9C, 0xA4, 0x72, 0xC0,
+    0xB7, 0xFD, 0x93, 0x26, 0x36, 0x3F, 0xF7, 0xCC, 0x34, 0xA5, 0xE5, 0xF1, 0x71, 0xD8, 0x31, 0x15,
+    0x04, 0xC7, 0x23, 0xC3, 0x18, 0x96, 0x05, 0x9A, 0x07, 0x12, 0x80, 0xE2, 0xEB, 0x27, 0xB2, 0x75,
+    0x09, 0x83, 0x2C, 0x1A, 0x1B, 0x6E, 0x5A, 0xA0, 0x52, 0x3B, 0xD6, 0xB3, 0x29, 0xE3, 0x2F, 0x84,
+    0x53, 0xD1, 0x00, 0xED, 0x20, 0xFC, 0xB1, 0x5B, 0x6A, 0xCB, 0xBE, 0x39, 0x4A, 0x4C, 0x58, 0xCF,
+    0xD0, 0xEF, 0xAA, 0xFB, 0x43, 0x4D, 0x33, 0x85, 0x45, 0xF9, 0x02, 0x7F, 0x50, 0x3C, 0x9F, 0xA8,
+    0x51, 0xA3, 0x40, 0x8F, 0x92, 0x9D, 0x38, 0xF5, 0xBC, 0xB6, 0xDA, 0x21, 0x10, 0xFF, 0xF3, 0xD2,
+    0xCD, 0x0C, 0x13, 0xEC, 0x5F, 0x97, 0x44, 0x17, 0xC4, 0xA7, 0x7E, 0x3D, 0x64, 0x5D, 0x19, 0x73,
+    0x60, 0x81, 0x4F, 0xDC, 0x22, 0x2A, 0x90, 0x88, 0x46, 0xEE, 0xB8, 0x14, 0xDE, 0x5E, 0x0B, 0xDB,
+    0xE0, 0x32, 0x3A, 0x0A, 0x49, 0x06, 0x24, 0x5C, 0xC2, 0xD3, 0xAC, 0x62, 0x91, 0x95, 0xE4, 0x79,
+    0xE7, 0xC8, 0x37, 0x6D, 0x8D, 0xD5, 0x4E, 0xA9, 0x6C, 0x56, 0xF4, 0xEA, 0x65, 0x7A, 0xAE, 0x08,
+    0xBA, 0x78, 0x25, 0x2E, 0x1C, 0xA6, 0xB4, 0xC6, 0xE8, 0xDD, 0x74, 0x1F, 0x4B, 0xBD, 0x8B, 0x8A,
+    0x70, 0x3E, 0xB5, 0x66, 0x48, 0x03, 0xF6, 0x0E, 0x61, 0x35, 0x57, 0xB9, 0x86, 0xC1, 0x1D, 0x9E,
+    0xE1, 0xF8, 0x98, 0x11, 0x69, 0xD9, 0x8E, 0x94, 0x9B, 0x1E, 0x87, 0xE9, 0xCE, 0x55, 0x28, 0xDF,
+    0x8C, 0xA1, 0x89, 0x0D, 0xBF, 0xE6, 0x42, 0x68, 0x41, 0x99, 0x2D, 0x0F, 0xB0, 0x54, 0xBB, 0x16
+\}
+\end{DoxyCode}
+Прерачунате вредности које користи функција Sub\+Byte. 
+
+Дефиниција у линији 18 датотеке aes.\+h.
+
