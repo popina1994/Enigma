@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <limits.h>
 
 UInt32 UCharToUInt32(const UChar byte[]) {
 	UInt32 keyPart = 0;
@@ -566,14 +567,20 @@ UInt32 StateToUInt32(const UChar state[]) {
 // vraca NULL ako nije uspelo
 UChar *CypherFileName(const UChar *inFileName) {
 	UChar *outFileName;
+	UChar full[MAX_FILE_PATH ]; // maksimalna duzina putanje
+	UInt32 maxFileLen; // maksimalna duzina imena
+
+	if (_fullpath(full, inFileName, MAX_FILE_PATH) == NULL) { return NULL; } // proverava duzinu putanje
+	
+	maxFileLen = MAX_FILE_PATH - (strlen(full) - strlen(inFileName)); // ukljuven NULL u duzinu
 
 	outFileName = malloc((strlen(inFileName) + strlen(CRYPT_TEXT) + 1) * sizeof(UChar));  // alociora prostor
 	if (outFileName == NULL) { fprintf(stderr, "Nedovoljno memorije\n"); return NULL; }
 
 
 	strcpy(outFileName, inFileName);
-	if (strlen(outFileName) + (strlen(CRYPT_TEXT)) > MAX_FILE_LEN) // ako je duzina sifrovanog fajla + ekstenzija veca od 255
-		strcpy(outFileName + MAX_FILE_LEN - strlen(CRYPT_TEXT) - 1, CRYPT_TEXT);
+	if (strlen(outFileName) + (strlen(CRYPT_TEXT)) + 1 > maxFileLen) // ako je duzina sifrovanog fajla + ekstenzija veca od 260
+		strcpy(outFileName + maxFileLen - strlen(CRYPT_TEXT) - 1, CRYPT_TEXT);
 	else strcat(outFileName, CRYPT_TEXT); // ektenzija
 	
 	return outFileName;
@@ -584,26 +591,35 @@ UChar *CypherFileName(const UChar *inFileName) {
 // vraca 2 ako je losa duzina imena (veca od 255 karaktera)
 int DeCypherFileName(UChar **inFileName) {
 	FILE *in;
-	int len = strlen(*inFileName), 
+	UChar full[MAX_FILE_PATH];
+	UInt32 len = strlen(*inFileName),
+		maxFileLen,
 		pos = 0; // oznacava na koju poziciju se upisuje nasumican broj
 
 	srand((UInt32)time(0));
+	if (_fullpath(full, *inFileName, MAX_FILE_PATH) == NULL) { return 2; }
+	maxFileLen = MAX_FILE_PATH - (strlen(full) - len); // sa NULL
 
 	while ((in = fopen(*inFileName, "rb")) != NULL) {
 		fclose(in); // zatvori dobro otvorenu datoteku
 		
-		if (len > MAX_FILE_LEN)
-			return 2; // nemoguce ime za desifrovanje (neko je zeznuo)
-		if (len < MAX_FILE_LEN) {
+		
+		if (len + 1 < maxFileLen) {
 			len++; // velicina novog imena
 			*inFileName = realloc(*inFileName, (len + 1) * sizeof(UChar));
 			if (*inFileName == NULL) { fprintf(stderr, "Nedovoljno memorije\n"); return 1; }
-			memmove(*inFileName + 1, *inFileName, strlen(*inFileName) + 1); // treba ispitati
 		}
 		
+
+		memmove(*inFileName + 1 + pos, *inFileName, strlen(*inFileName) + 1 - pos); // treba ispitati
+		
 		(*inFileName)[pos] = (UChar)((DIGIT_NUM - 1)* (double)rand() / RAND_MAX + '0');
-		if (len == MAX_FILE_LEN) pos++;
+		if (len + 1 == maxFileLen) {
+			(*inFileName)[len] = '\0';
+			pos++;
+		}
 	}
+	
 	return 0;
 }
 
@@ -703,10 +719,6 @@ int CypherAES(UChar **inFileName, const UChar keyIn[], const int keySize) {
 	if (errorExpansion == -1) { fprintf(stderr, "Nema memorije\n"); return 3; }
 	if (errorExpansion == 1) { fprintf(stderr, "Losa duzina kljuca\n"); return 5; }
 
-	if (strlen(*inFileName) > MAX_FILE_LEN) {
-		fprintf(stderr, "Predugacko ime\n");
-		return 4;
-	}
 
 	sizeOfInputFile = SizeOfFile(*inFileName); // da ne bi pocelo citanje
 
@@ -797,11 +809,7 @@ int DecypherAES(UChar **inFileName, const UChar keyIn[], const int keySize) {
 	if (errorExpansion == -1) { fprintf(stderr, "Nema memorije\n"); return 3; }
 	if (errorExpansion == 1) { fprintf(stderr, "Losa duzina kljuca\n"); return 5; }
 
-	if (strlen(*inFileName) > MAX_FILE_LEN) {
-		fprintf(stderr, "Predugacko ime\n");
-		return 4;
-	}
-
+	
 	in = fopen(*inFileName, "rb"); // citanje iz binarne
 	if (in == NULL) { fprintf(stderr, "Greska pri citanju datoteke\n"); return 1; }
 
@@ -832,8 +840,9 @@ int DecypherAES(UChar **inFileName, const UChar keyIn[], const int keySize) {
 
 	// da li moze da se napravi originalni fajl
 	errorFile = DeCypherFileName(&outFileName);
-	if (errorFile == 1) { return 3;}
-	if (errorFile == 2) { return 4;}
+	if (errorFile == 1) { fprintf(stderr, "Nedovoljno memorije\n"); return 3; }
+	if (errorFile == 2) { fprintf(stderr, "Nije dobra duzina imena");  return 4; }
+
 
 	// otvaranje fajla gde cemo desifrovani rezultat smesititi
 	out = fopen(outFileName, "wb");
@@ -879,9 +888,10 @@ int main() {
 
 	freopen("ulazIme.in", "r", stdin);
 	inputName = (UChar*)malloc(256);
-	strcpy(inputName, "ulaz.in.crypt");
-	CypherAES(&inputName, key, strlen(key) * 8);
+	scanf("%s", inputName);
+	CypherAES(&inputName, key, 128);
 	DecypherAES(&inputName, key, strlen(key) * 8);
-
+	//DeCypherFileName(&inputName);
+	system("pause");
 	return 0;
 }

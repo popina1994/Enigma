@@ -94,7 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!--header-->
 <div class="contents">
 
-<p>Фајл садржи функције за шифорвање датотека АЕС-ом.  
+<p>Фајл садржи функције за шифорвање и дешфировање датотека АЕС-ом.  
 <a href="#details">Још...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 </div>
@@ -110,12 +110,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <tr class="separator:a43ff16ab6b9bd24602669bf844cc81f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e3ce397037c8f4f14f7adc0b969b662"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aes_8h.html#a7e3ce397037c8f4f14f7adc0b969b662">STATE_SIZE</a>&#160;&#160;&#160;16</td></tr>
 <tr class="separator:a7e3ce397037c8f4f14f7adc0b969b662"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd5ab5d380936ded4f6cbe6fe24dca8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aes_8h.html#a3fd5ab5d380936ded4f6cbe6fe24dca8">MAX_FILE_LEN</a>&#160;&#160;&#160;214</td></tr>
-<tr class="separator:a3fd5ab5d380936ded4f6cbe6fe24dca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae4a1d7314e5a1620fe97baeab89a5102"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a>&#160;&#160;&#160;&quot;.crypt&quot;</td></tr>
 <tr class="separator:ae4a1d7314e5a1620fe97baeab89a5102"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5409047cf0fceba4481b7e06c842b10"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aes_8h.html#ae5409047cf0fceba4481b7e06c842b10">DIGIT_NUM</a>&#160;&#160;&#160;10</td></tr>
 <tr class="separator:ae5409047cf0fceba4481b7e06c842b10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a263efd24d550124313df51247f07457a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="aes_8h.html#a263efd24d550124313df51247f07457a">MAX_FILE_PATH</a>&#160;&#160;&#160;260</td></tr>
+<tr class="separator:a263efd24d550124313df51247f07457a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Дефиниције типова</h2></td></tr>
@@ -213,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <tr class="separator:a62cd387485ff345a0a513f5aae69ad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Опширније</h2>
-<div class="textblock"><p>Фајл садржи функције за шифорвање датотека АЕС-ом. </p>
+<div class="textblock"><p>Фајл садржи функције за шифорвање и дешфировање датотека АЕС-ом. </p>
 <dl class="section author"><dt>Аутор</dt><dd>Ђорђе Живановић </dd></dl>
 
 <p>Дефиниција у датотеци <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
@@ -257,7 +257,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><div class="memdoc">
 <p>Екстензија криптоване датотеке. </p>
 
-<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00015">15</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00014">14</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
 
 </div>
 </div>
@@ -272,22 +272,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><div class="memdoc">
 <p>Број цифара у декадном систему. </p>
 
-<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00016">16</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00015">15</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a3fd5ab5d380936ded4f6cbe6fe24dca8"></a>
+<a class="anchor" id="a263efd24d550124313df51247f07457a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define MAX_FILE_LEN&#160;&#160;&#160;214</td>
+          <td class="memname">#define MAX_FILE_PATH&#160;&#160;&#160;260</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Максимална дужина имена датотеке у Windows-у </p>
+<p>Максимална дужина путање у <code>WINDOWS</code> </p>
 
-<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00014">14</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8h_source.html#l00016">16</a> датотеке <a class="el" href="aes_8h_source.html">aes.h</a>.</p>
 
 </div>
 </div>
@@ -388,7 +388,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00016">16</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00017">17</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -429,7 +429,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line">crc = <a class="code" href="aes_8c.html#afd7182b209f6bdecd24beaea1a6517aa">CRC32</a>(crc, state); <span class="comment">//        crc = 0xecbb4b55    </span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00611">611</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00627">627</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -484,7 +484,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- fragment --> </dd></dl>
 <dl class="section see"><dt>Види</dt><dd><a class="el" href="aes_8h.html#aaad97a014c1d5710dc99f1449d41cac1" title="Развија кључ key у низ 4-бајтних кључева w. ">KeyExpansion</a> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00623">623</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00639">639</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -540,7 +540,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- fragment --> </dd></dl>
 <dl class="section warning"><dt>Упозорење</dt><dd>Величина датотеке која се шифрује мора бити мања од <code>4GB</code>. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00690">690</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00706">706</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -559,7 +559,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><div class="memdoc">
 
 <p>Прави име шифроване датотеке од имена датотеке који треба да шифрује </p>
-<p>Додаје <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a> на крај имена шифроване датотеке <code>inFileName</code>. Ако је име датотеке које би се добило веће од максималне дужине имена датотеке коју <code>WINDOWS</code> може да прими (<a class="el" href="aes_8h.html#a3fd5ab5d380936ded4f6cbe6fe24dca8">MAX_FILE_LEN</a>), на крај имена додаје <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a> преко онолико карактера колико треба да се дода <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a>, а да не пређе ограничење у <code>WINDOWS</code>. </p><dl class="params"><dt>Параметри</dt><dd>
+<p>Додаје <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a> на крај имена шифроване датотеке <code>inFileName</code>. Ако је име путање које би се добило веће од максималне дужине имена путање коју <code>WINDOWS</code> може да прими (<a class="el" href="aes_8h.html#a263efd24d550124313df51247f07457a">MAX_FILE_PATH</a>), на крај имена додаје <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a> преко онолико карактера колико треба да се дода <a class="el" href="aes_8h.html#ae4a1d7314e5a1620fe97baeab89a5102">CRYPT_TEXT</a>, а да не пређе ограничење у <code>WINDOWS</code>. </p><dl class="params"><dt>Параметри</dt><dd>
   <table class="params">
     <tr><td class="paramname">inFileName</td><td>[in] Име улазне датотеке који се шифрује. </td></tr>
   </table>
@@ -570,7 +570,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line">t = <a class="code" href="aes_8c.html#a4f1ca53c57b6d7a4661e804b46e32556">CypherFileName</a>(t); <span class="comment">// t postaje tata.crypt;</span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00567">567</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00568">568</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -627,7 +627,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </dl>
 <dl class="section warning"><dt>Упозорење</dt><dd>Простор од <a class="el" href="aes_8h.html#a7e3ce397037c8f4f14f7adc0b969b662">STATE_SIZE</a> за <code>out</code> мора бити алоциран изван функције. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00440">440</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00441">441</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -683,7 +683,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- fragment --> </dd></dl>
 <dl class="section warning"><dt>Упозорење</dt><dd>Величина датотеке која се шифрује мора бити мања од <code>4GB</code> (искључујући заглавља). </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00783">783</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00795">795</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -702,7 +702,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><div class="memdoc">
 
 <p>Враћа име датотеке које ће имати након што се дешифрује. </p>
-<p>Проверава да ли постоји датотека са истим именом као <code>*inFileName</code>. Ако постоји додаје насумичан број на почетак док дато име не буде постојало. Кад дужина имена са додатим насумичним бројем пређе дужину <a class="el" href="aes_8h.html#a3fd5ab5d380936ded4f6cbe6fe24dca8">MAX_FILE_LEN</a> додаје се број тако да се крај имена губи. <code>*inFileName</code> мора бити алоциран динамички. </p><dl class="params"><dt>Параметри</dt><dd>
+<p>Проверава да ли постоји датотека са истим именом као <code>*inFileName</code>. Ако постоји додаје насумичан број на почетак док дато име не буде постојало. Кад дужина путање до имена фајла са додатим насумичним бројем пређе дужину <a class="el" href="aes_8h.html#a263efd24d550124313df51247f07457a">MAX_FILE_PATH</a> додаје се број тако да се крај имена губи. <code>*inFileName</code> мора бити алоциран динамички. </p><dl class="params"><dt>Параметри</dt><dd>
   <table class="params">
     <tr><td class="paramname">inFileName</td><td>[in/out] Име датотеке који се дешифрује. </td></tr>
   </table>
@@ -710,13 +710,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </dl>
 <dl class="section return"><dt>Враћа</dt><dd><code>0</code> aко је све добро протекло.<br />
  <code>1</code> aко нема довољно меморије. <br />
- <code>2</code> ако је првобитно прослеђено име веће од <a class="el" href="aes_8h.html#a3fd5ab5d380936ded4f6cbe6fe24dca8">MAX_FILE_LEN</a> <div class="fragment"><div class="line"><a class="code" href="aes_8h.html#a36fec739165651cfd8d4d9306f2a3996">UChar</a> *t = (<a class="code" href="aes_8h.html#a36fec739165651cfd8d4d9306f2a3996">UChar</a>*)malloc(5);</div>
+ <code>2</code> ако је путања неисправна (предугачко име прослеђено). <div class="fragment"><div class="line"><a class="code" href="aes_8h.html#a36fec739165651cfd8d4d9306f2a3996">UChar</a> *t = (<a class="code" href="aes_8h.html#a36fec739165651cfd8d4d9306f2a3996">UChar</a>*)malloc(5);</div>
 <div class="line">t[0] = <span class="charliteral">&#39;\0&#39;</span>;</div>
 <div class="line">strcat(t, <span class="stringliteral">&quot;tata&quot;</span>);</div>
 <div class="line"><a class="code" href="aes_8c.html#af5e8e76552be6bdf6fc268e941e7d689">DeCypherFileName</a>(&amp;t); </div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00585">585</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00592">592</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -773,7 +773,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </dl>
 <dl class="section warning"><dt>Упозорење</dt><dd>Простор од <a class="el" href="aes_8h.html#a7e3ce397037c8f4f14f7adc0b969b662">STATE_SIZE</a> за <code>out</code> мора бити алоциран изван функције. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00373">373</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00374">374</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -801,7 +801,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00234">234</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00235">235</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -829,7 +829,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00120">120</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00121">121</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -857,7 +857,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00078">78</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00079">79</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -907,7 +907,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line"><a class="code" href="aes_8c.html#a2b40a4093b74b3da1d8209ea3c140020">KeyExpansion</a>(keyIn, &amp;key, 128); <span class="comment">// Развија 128-битни keyIn кључ keyIn.</span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00340">340</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00341">341</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -935,7 +935,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00143">143</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00144">144</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -986,7 +986,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line">printf(<span class="stringliteral">&quot;Greska pri citanju\n&quot;</span>);</div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00523">523</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00524">524</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1014,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00322">322</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00323">323</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1042,7 +1042,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00097">97</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00098">98</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1072,7 +1072,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- fragment --> </dd></dl>
 <dl class="section warning"><dt>Упозорење</dt><dd>Величина датотеке не сме бити већа од 4GB. Ако дође до грешке при читању датотеке, непознат је резултат. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00505">505</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00506">506</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1103,7 +1103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- fragment --> </dd></dl>
 <dl class="section note"><dt>Напомена</dt><dd>Функција је неопходна јер се не зна да ли рачунар на ком се покреће програм има LITTLE-ENDIAN или BIG-ENDIAN. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00556">556</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00557">557</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1131,7 +1131,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
   </dd>
 </dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00059">59</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00060">60</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1160,7 +1160,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line">t = <a class="code" href="aes_8c.html#ae42b375b0183763e33ef62fb03c41f4d">SubWord</a>(t); <span class="comment">// t = 0x6363637c </span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00326">326</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00327">327</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1189,7 +1189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line"><a class="code" href="aes_8h.html#ab6132671e695a54d5c39ed9ce1536087">UInt32</a> t = UCharToUint32(byte); <span class="comment">// t добија вредност 0x0123</span></div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00007">7</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00008">8</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1230,7 +1230,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </dl>
 <dl class="section note"><dt>Напомена</dt><dd>Функција је неопходна јер се не зна да ли рачунар на ком се покреће програм има LITTLE-ENDIAN или BIG-ENDIAN. </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00548">548</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00549">549</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1273,7 +1273,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 <div class="line">printf(<span class="stringliteral">&quot;Greska pri pisanju\n&quot;</span>);</div>
 </div><!-- fragment --> </dd></dl>
 
-<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00541">541</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
+<p>Дефиниција у линији <a class="el" href="aes_8c_source.html#l00542">542</a> датотеке <a class="el" href="aes_8c_source.html">aes.c</a>.</p>
 
 </div>
 </div>
@@ -1395,7 +1395,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Тражи');
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Направљено Sun Jun 15 2014 13:47:16 за AES помоћу &#160;<a href="http://www.doxygen.org/index.html">
+Направљено Fri Jun 20 2014 16:18:11 за AES помоћу &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
